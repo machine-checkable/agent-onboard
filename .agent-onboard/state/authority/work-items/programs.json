@@ -7,6 +7,11 @@
       "id": "P1",
       "title": "Public source dogfood program",
       "status": "open"
+    },
+    {
+      "id": "P2",
+      "title": "Repository Control Plane v2 Architecture Overhaul",
+      "status": "open"
     }
   ]
 }

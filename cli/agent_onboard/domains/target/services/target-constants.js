@@ -122,6 +122,7 @@ const TARGET_DOCTOR_SCHEMA = Object.freeze({
 
 const TARGET_DOCTOR_PACKAGE_MANAGER_FILES = freezeEntries([
   { name: 'npm', file: 'package-lock.json' },
+  { name: 'npm', file: '.npmrc' },
   { name: 'pnpm', file: 'pnpm-lock.yaml' },
   { name: 'yarn', file: 'yarn.lock' },
   { name: 'bun', file: 'bun.lockb' },

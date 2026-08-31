@@ -336,6 +336,10 @@ function createPublicRuntimeAgentsBridgeService(options = Object.freeze({})) {
   }
 
   function runAgents(args = []) {
+    const allowed = new Set(['--preview', '--write', '--force']);
+    const unknown = args.filter((arg) => !allowed.has(arg));
+    if (unknown.length > 0) throw new Error(`agents does not support: ${unknown.join(', ')}`);
+
     const preview = args.includes('--preview');
     const write = args.includes('--write');
     const force = args.includes('--force');

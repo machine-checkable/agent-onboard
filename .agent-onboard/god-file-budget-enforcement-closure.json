@@ -84,10 +84,10 @@
     {
       "path": ".agent-onboard/work-items.json",
       "category": "authority_registry",
-      "current_lines": 1833,
-      "admitted_reason": "W22 adds one compact work item and closure reference while continuing registry compaction pressure under the source-size ratchet.",
-      "next_reduction_gate": "P1S3M7W23",
-      "current_bytes": 53092
+      "current_lines": 1878,
+      "admitted_reason": "P2S1M1W1-W2 add compact P2 lifecycle records and one open next work item for v0.1.3; growth remains bounded by the source-size ratchet.",
+      "next_reduction_gate": "P2S1M1W3",
+      "current_bytes": 54254
     },
     {
       "path": "README.md",

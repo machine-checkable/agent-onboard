@@ -7,18 +7,20 @@
   "root_compatibility_projection": ".agent-onboard/work-items.json",
   "live_compatibility_projection": ".agent-onboard/state/live/work-items.json",
   "counts": {
-    "open": 0,
+    "open": 1,
     "claimed": 0,
-    "closed": 193,
-    "programs": 1,
-    "stages": 3,
-    "milestones": 10,
-    "work_items": 193
+    "closed": 195,
+    "programs": 2,
+    "stages": 4,
+    "milestones": 11,
+    "work_items": 196
   },
-  "latest_work_item_id": "P1S3M7W22",
-  "latest_closed_work_item_id": "P1S3M7W22",
+  "latest_work_item_id": "P2S1M1W3",
+  "latest_closed_work_item_id": "P2S1M1W2",
   "by_status": {
-    "open": [],
+    "open": [
+      "P2S1M1W3"
+    ],
     "claimed": [],
     "closed": [
       "P1S1M1W1",
@@ -213,7 +215,9 @@
       "P1S3M7W19",
       "P1S3M7W20",
       "P1S3M7W21",
-      "P1S3M7W22"
+      "P1S3M7W22",
+      "P2S1M1W1",
+      "P2S1M1W2"
     ]
   },
   "by_milestone": {
@@ -429,6 +433,11 @@
       "P1S3M7W20",
       "P1S3M7W21",
       "P1S3M7W22"
+    ],
+    "P2S1M1": [
+      "P2S1M1W1",
+      "P2S1M1W2",
+      "P2S1M1W3"
     ]
   },
   "item_shards": [
@@ -511,24 +520,18 @@
       "bytes": 7641,
       "sha256": "c415a5e48c221cff3f605a60dcc993e8a6d35f15a1b031cf85fa169d10c2565f",
       "file_id": "ni:///sha-256;xBWl5IwiHP8_YFpg3MmT6KbTXxWhsDHPhfoWnRDCVl8"
+    },
+    {
+      "milestone_id": "P2S1M1",
+      "path": ".agent-onboard/state/authority/work-items/items/by-milestone/P2S1M1.json",
+      "item_count": 3,
+      "bytes": 997,
+      "sha256": "b0fe5289e54da4098ae61126b2ebf4c212a21ea3cef8bed78a61ba6cece0ab2d",
+      "file_id": "ni:///sha-256;sP5SieVNpAmK5hEmsuv0whKiHqPO-L7XimG6bOzgqy0"
     }
   ],
-  "updated_at": "2026-07-10T13:10:00.000Z",
+  "updated_at": "2026-08-31T04:25:00.000Z",
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W18",
-      "title": "Public Router Cutover Runtime Service Near-God Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
-    {
-      "id": "P1S3M7W19",
-      "title": "Public Runtime Surface Service Residual Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W20",
       "title": "Public Source Domain Runtime Service Near-God Reduction Gate",
@@ -548,6 +551,20 @@
       "title": "Public Target Metadata Service Split Gate",
       "status": "closed",
       "milestone_id": "P1S3M7",
+      "domain": null
+    },
+    {
+      "id": "P2S1M1W1",
+      "title": "External cold-start detection hardening",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M1W2",
+      "title": "Architecture baseline census and P2 decision dossier",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
       "domain": null
     }
   ]

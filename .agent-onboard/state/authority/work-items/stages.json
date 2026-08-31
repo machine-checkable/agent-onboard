@@ -20,6 +20,12 @@
       "program_id": "P1",
       "title": "Public architecture maturation stage",
       "status": "open"
+    },
+    {
+      "id": "P2S1",
+      "program_id": "P2",
+      "title": "Evidence and Contract Freeze",
+      "status": "open"
     }
   ]
 }

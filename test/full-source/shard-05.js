@@ -571,6 +571,26 @@ module.exports = function registerFullSourceShard(fullSourceTest, context) {
   });
 
 
+  fullSourceTest('agents rejects unsupported target routing instead of silently ignoring it', () => {
+    const cwd = tempRepo();
+    const dir = tempRepo();
+    const result = run(['agents', '--preview', '--target', dir], { cwd });
+    const output = readJsonFailure(result);
+    assert.ok(output.message.includes('agents does not support: --target'));
+    assert.strictEqual(fs.existsSync(path.join(cwd, 'AGENTS.md')), false);
+    assert.strictEqual(fs.existsSync(path.join(dir, 'AGENTS.md')), false);
+  });
+
+
+  fullSourceTest('agents rejects unsupported arguments instead of silently ignoring them', () => {
+    const dir = tempRepo();
+    const result = run(['agents', '--preview', '--unknown'], { cwd: dir });
+    const output = readJsonFailure(result);
+    assert.ok(output.message.includes('agents does not support: --unknown'));
+    assert.strictEqual(fs.existsSync(path.join(dir, 'AGENTS.md')), false);
+  });
+
+
   fullSourceTest('full source block line 1281', () => {
     const dir = tempRepo();
     const result = run(['agents', '--write'], { cwd: dir });

@@ -1,7 +1,7 @@
 {
   "schema": "agent-onboard-public-source-size-budget-ratchet-001",
   "status": "active",
-  "work_item_id": "P1S3M7W22",
+  "work_item_id": "P2S1M1W2",
   "release_line": "public_target_metadata_service_split_gate",
   "ratchet_mode": "no_tracked_growth_beyond_maximum_and_no_new_oversized_files",
   "god_file_thresholds": {
@@ -87,13 +87,13 @@
   "tracked_files": {
     ".agent-onboard/state/closures/work-items-closures.jsonl": {
       "category": "authority_state",
-      "max_lines": 192,
-      "max_bytes": 87873,
+      "max_lines": 194,
+      "max_bytes": 89379,
       "baseline_lines": 168,
       "baseline_bytes": 76889,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M1W2 adds compact P2 W1/W2 closure references while preserving text-first JSONL closure storage.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W33",
@@ -310,6 +310,15 @@
           "new_max_bytes": 87873,
           "previous_max_lines": 191,
           "previous_max_bytes": 87415
+        },
+        {
+          "work_item_id": "P2S1M1W2",
+          "gate": "P2 Architecture Baseline and Decision Dossier",
+          "reason": "P2S1M1W2 adds compact P2 W1/W2 closure references while preserving text-first JSONL closure storage.",
+          "previous_max_lines": 192,
+          "new_max_lines": 194,
+          "previous_max_bytes": 87873,
+          "new_max_bytes": 89379
         }
       ]
     },
@@ -433,13 +442,13 @@
     },
     ".agent-onboard/work-items.json": {
       "category": "authority_registry",
-      "max_lines": 1833,
-      "max_bytes": 53092,
+      "max_lines": 1878,
+      "max_bytes": 54254,
       "baseline_lines": 1573,
       "baseline_bytes": 44798,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M1W2 admits P2 program/stage/milestone lifecycle through W2 closure and leaves W3 open for semantic-oracle work.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W33",
@@ -645,6 +654,15 @@
           "new_max_bytes": 53092,
           "previous_max_lines": 1822,
           "previous_max_bytes": 52782
+        },
+        {
+          "work_item_id": "P2S1M1W2",
+          "gate": "P2 Architecture Baseline and Decision Dossier",
+          "reason": "P2S1M1W2 admits P2 program/stage/milestone lifecycle through W2 closure and leaves W3 open for semantic-oracle work.",
+          "previous_max_lines": 1833,
+          "new_max_lines": 1878,
+          "previous_max_bytes": 53092,
+          "new_max_bytes": 54254
         }
       ]
     },
@@ -1143,13 +1161,13 @@
     },
     ".agent-onboard/state/closures/work-items/manifest.json": {
       "category": "authority_state",
-      "max_lines": 146,
-      "max_bytes": 5895,
+      "max_lines": 155,
+      "max_bytes": 6266,
       "baseline_lines": 126,
       "baseline_bytes": 5085,
       "target_lines": 700,
       "target_bytes": 65536,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M1W2 refreshes derived work-item authority/closure projections after admitted P2 lifecycle state.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W34",
@@ -1241,13 +1259,13 @@
     },
     ".agent-onboard/state/closures/work-items/index.json": {
       "category": "authority_state",
-      "max_lines": 126,
-      "max_bytes": 5069,
+      "max_lines": 135,
+      "max_bytes": 5440,
       "baseline_lines": 110,
       "baseline_bytes": 4384,
       "target_lines": 700,
       "target_bytes": 65536,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M1W2 refreshes derived work-item authority/closure projections after admitted P2 lifecycle state.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W1",
@@ -1543,12 +1561,12 @@
     ".agent-onboard/god-file-budget-enforcement-closure.json": {
       "category": "authority_registry",
       "max_lines": 239,
-      "max_bytes": 8150,
+      "max_bytes": 8155,
       "baseline_lines": 105,
       "baseline_bytes": 3859,
       "target_lines": 220,
       "target_bytes": 32768,
-      "reason": "W22 refreshes god-file admitted migration debt after target metadata service split.",
+      "reason": "P2S1M1W2 exact release-foundation ratchet refresh after canonical/derived state synchronization.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W1",
@@ -1715,13 +1733,13 @@
     },
     ".agent-onboard/source-size-budget-ratchet.json": {
       "category": "authority_registry",
-      "max_lines": 4900,
-      "max_bytes": 215000,
+      "max_lines": 4645,
+      "max_bytes": 202274,
       "baseline_lines": 4602,
       "baseline_bytes": 200572,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "W22 splits target metadata service and refreshes source-size/god-file ratchets.",
+      "reason": "P2S1M1W2 exact self-ratchet refresh for v0.1.2 foundation.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W2",
@@ -2478,8 +2496,8 @@
     },
     ".agent-onboard/state/authority/work-items/items/index.json": {
       "category": "authority_state",
-      "max_lines": 554,
-      "max_bytes": 12550,
+      "max_lines": 571,
+      "max_bytes": 12995,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2646,12 +2664,12 @@
       "target_bytes": 65536,
       "baseline_lines": 484,
       "baseline_bytes": 10953,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage."
+      "reason": "P2S1M1W2 refreshes derived work-item authority/closure projections after admitted P2 lifecycle state."
     },
     ".agent-onboard/state/authority/work-items/manifest.json": {
       "category": "authority_state",
-      "max_lines": 124,
-      "max_bytes": 5215,
+      "max_lines": 130,
+      "max_bytes": 5499,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2717,14 +2735,14 @@
       ],
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M1W2 refreshes derived work-item authority/closure projections after admitted P2 lifecycle state.",
       "baseline_lines": 124,
       "baseline_bytes": 5215
     },
     ".agent-onboard/state/indexes/work-items.index.json": {
       "category": "authority_state",
-      "max_lines": 514,
-      "max_bytes": 10466,
+      "max_lines": 523,
+      "max_bytes": 10541,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2799,14 +2817,14 @@
       ],
       "target_lines": 700,
       "target_bytes": 65536,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M1W2 refreshes derived work-item authority/closure projections after admitted P2 lifecycle state.",
       "baseline_lines": 524,
       "baseline_bytes": 11312
     },
     ".agent-onboard/work-items.index.json": {
       "category": "authority_registry",
-      "max_lines": 53,
-      "max_bytes": 1446,
+      "max_lines": 61,
+      "max_bytes": 1607,
       "target_lines": 500,
       "target_bytes": 65536,
       "ratchet_history": [
@@ -2888,9 +2906,18 @@
           "new_max_bytes": 1446,
           "previous_max_lines": 53,
           "previous_max_bytes": 1469
+        },
+        {
+          "work_item_id": "P2S1M1W2",
+          "gate": "P2 Architecture Baseline and Decision Dossier",
+          "reason": "P2S1M1W2 admits the P2 hierarchy and leaves P2S1M1W3 open; compact work-item index grows only to represent the new active program/stage/milestone and next work.",
+          "previous_max_lines": 53,
+          "new_max_lines": 61,
+          "previous_max_bytes": 1446,
+          "new_max_bytes": 1607
         }
       ],
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M1W2 admits the P2 hierarchy and leaves P2S1M1W3 open; compact work-item index grows only to represent the new active program/stage/milestone and next work.",
       "baseline_lines": 53,
       "baseline_bytes": 1436
     },

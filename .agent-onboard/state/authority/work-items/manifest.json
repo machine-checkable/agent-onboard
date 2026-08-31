@@ -17,15 +17,15 @@
     "mdbx_current_source_of_truth": false
   },
   "counts": {
-    "open": 0,
+    "open": 1,
     "claimed": 0,
-    "closed": 193,
-    "programs": 1,
-    "stages": 3,
-    "milestones": 10,
-    "work_items": 193
+    "closed": 195,
+    "programs": 2,
+    "stages": 4,
+    "milestones": 11,
+    "work_items": 196
   },
-  "shard_count": 14,
+  "shard_count": 15,
   "rebuild_order": [
     "vocabulary.json",
     "programs.json",
@@ -43,21 +43,21 @@
     },
     {
       "path": ".agent-onboard/state/authority/work-items/programs.json",
-      "bytes": 270,
-      "sha256": "96e0b64054a744b2b3f19d55951c37ee4e960b93741c4f58455df47d66611f49",
-      "file_id": "ni:///sha-256;luC2QFSnRLKz8Z1VlRw37k6WC5N0HE9YRV30fWZhH0k"
+      "bytes": 392,
+      "sha256": "c5622365e71473f121ee2cff0c05da68e299a02948b2edd2e27780b8122c462a",
+      "file_id": "ni:///sha-256;xWIjZecUc_Eh7iz_DAXaaOKZoClIsu3S4neAuBIsRio"
     },
     {
       "path": ".agent-onboard/state/authority/work-items/stages.json",
-      "bytes": 570,
-      "sha256": "a6e796ae7ff719e367925fbcbca4eaab1124ebe2694112f47719a74c802dfdc2",
-      "file_id": "ni:///sha-256;pueWrn_3GeNnkl-8vKTqqxEk6-JpQRL0dxmnTIAt_cI"
+      "bytes": 699,
+      "sha256": "5aabe7dd478b7de6879074f74728f4635d6c6c426232a5af314ddbe400f55888",
+      "file_id": "ni:///sha-256;Wqvn3UeLfeaHkHT3Ryj0Y11sbEJiMqWvMU3b5AD1WIg"
     },
     {
       "path": ".agent-onboard/state/authority/work-items/milestones.json",
-      "bytes": 1628,
-      "sha256": "ef949a673661d74afc1f704ef62a53f13ac421e7781b3cbe6f9021700e273a55",
-      "file_id": "ni:///sha-256;75SaZzZh10r8H3BO9ipT8TrEIed4Gzy-b5AhcA4nOlU"
+      "bytes": 1755,
+      "sha256": "0d3645c6be61a7ce283f3eabe35c679cbdeff884eb59f446dced40799e89cac3",
+      "file_id": "ni:///sha-256;DTZFxr5hp84oPz6r41xnnL3v-ITrWfRG3O1AeZ6JysM"
     },
     {
       "path": ".agent-onboard/state/authority/work-items/items/by-milestone/P1S1M1.json",
@@ -118,7 +118,13 @@
       "bytes": 7641,
       "sha256": "c415a5e48c221cff3f605a60dcc993e8a6d35f15a1b031cf85fa169d10c2565f",
       "file_id": "ni:///sha-256;xBWl5IwiHP8_YFpg3MmT6KbTXxWhsDHPhfoWnRDCVl8"
+    },
+    {
+      "path": ".agent-onboard/state/authority/work-items/items/by-milestone/P2S1M1.json",
+      "bytes": 997,
+      "sha256": "b0fe5289e54da4098ae61126b2ebf4c212a21ea3cef8bed78a61ba6cece0ab2d",
+      "file_id": "ni:///sha-256;sP5SieVNpAmK5hEmsuv0whKiHqPO-L7XimG6bOzgqy0"
     }
   ],
-  "updated_at": "2026-07-10T13:10:00.000Z"
+  "updated_at": "2026-08-31T04:25:00.000Z"
 }

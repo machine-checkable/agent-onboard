@@ -1,0 +1,37 @@
+{
+  "schema": "agent-onboard-work-items-authority-item-shard-001",
+  "package_name": "agent-onboard",
+  "source": ".agent-onboard/work-items.json",
+  "milestone_id": "P2S1M1",
+  "item_count": 3,
+  "items": [
+    {
+      "id": "P2S1M1W1",
+      "milestone_id": "P2S1M1",
+      "title": "External cold-start detection hardening",
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-08-31T04:12:56.102Z"
+      },
+      "closure_ref": "closures:P2S1M1W1"
+    },
+    {
+      "id": "P2S1M1W2",
+      "milestone_id": "P2S1M1",
+      "title": "Architecture baseline census and P2 decision dossier",
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-08-31T04:14:21.809Z"
+      },
+      "closure_ref": "closures:P2S1M1W2"
+    },
+    {
+      "id": "P2S1M1W3",
+      "milestone_id": "P2S1M1",
+      "title": "Command/schema/state classification and v1 semantic oracle",
+      "status": "open"
+    }
+  ]
+}

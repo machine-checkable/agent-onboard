@@ -3,30 +3,24 @@
   "status": "active",
   "registry_path": ".agent-onboard/work-items.json",
   "raw_registry_loaded_by_default": false,
-  "item_count": 193,
-  "open_count": 0,
-  "closed_count": 193,
+  "item_count": 196,
+  "open_count": 1,
+  "closed_count": 195,
   "admission_queue_count": 0,
-  "active_work_item_ids": [],
-  "next_open_work_item": null,
+  "active_work_item_ids": [
+    "P2S1M1W3"
+  ],
+  "next_open_work_item": {
+    "id": "P2S1M1W3",
+    "title": "Command/schema/state classification and v1 semantic oracle",
+    "status": "open",
+    "milestone_id": "P2S1M1",
+    "domain": null
+  },
   "next_admission_candidate": null,
   "active_admission_queue": [],
   "latest_closed_limit": 5,
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W18",
-      "title": "Public Router Cutover Runtime Service Near-God Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
-    {
-      "id": "P1S3M7W19",
-      "title": "Public Runtime Surface Service Residual Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W20",
       "title": "Public Source Domain Runtime Service Near-God Reduction Gate",
@@ -47,7 +41,21 @@
       "status": "closed",
       "milestone_id": "P1S3M7",
       "domain": null
+    },
+    {
+      "id": "P2S1M1W1",
+      "title": "External cold-start detection hardening",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M1W2",
+      "title": "Architecture baseline census and P2 decision dossier",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
+      "domain": null
     }
   ],
-  "updated_at": "2026-07-10T13:10:00.000Z"
+  "updated_at": "2026-08-31T04:18:21.917Z"
 }

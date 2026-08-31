@@ -28,6 +28,11 @@
       "id": "P1",
       "title": "Public source dogfood program",
       "status": "open"
+    },
+    {
+      "id": "P2",
+      "title": "Repository Control Plane v2 Architecture Overhaul",
+      "status": "open"
     }
   ],
   "stages": [
@@ -47,6 +52,12 @@
       "id": "P1S3",
       "program_id": "P1",
       "title": "Public architecture maturation stage",
+      "status": "open"
+    },
+    {
+      "id": "P2S1",
+      "program_id": "P2",
+      "title": "Evidence and Contract Freeze",
       "status": "open"
     }
   ],
@@ -109,6 +120,12 @@
       "id": "P1S3M7",
       "stage_id": "P1S3",
       "title": "Public runtime composer debt reduction milestone",
+      "status": "open"
+    },
+    {
+      "id": "P2S1M1",
+      "stage_id": "P2S1",
+      "title": "Current Reality Baseline",
       "status": "open"
     }
   ],
@@ -1828,6 +1845,34 @@
         "claimed_at": "2026-07-10T13:10:00.000Z"
       },
       "closure_ref": "closures:P1S3M7W22"
+    },
+    {
+      "id": "P2S1M1W1",
+      "milestone_id": "P2S1M1",
+      "title": "External cold-start detection hardening",
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-08-31T04:12:56.102Z"
+      },
+      "closure_ref": "closures:P2S1M1W1"
+    },
+    {
+      "id": "P2S1M1W2",
+      "milestone_id": "P2S1M1",
+      "title": "Architecture baseline census and P2 decision dossier",
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-08-31T04:14:21.809Z"
+      },
+      "closure_ref": "closures:P2S1M1W2"
+    },
+    {
+      "id": "P2S1M1W3",
+      "milestone_id": "P2S1M1",
+      "title": "Command/schema/state classification and v1 semantic oracle",
+      "status": "open"
     }
   ]
 }

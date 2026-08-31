@@ -386,6 +386,30 @@ module.exports = function registerFullSourceShard(fullSourceTest, context) {
   });
 
 
+  fullSourceTest('target profile detects lowercase readme and npmrc without running target commands', () => {
+    const dir = tempRepo();
+    fs.writeFileSync(path.join(dir, 'package.json'), JSON.stringify({
+      name: 'external-profile-fixture',
+      scripts: { test: 'ava' }
+    }, null, 2) + '\n');
+    fs.writeFileSync(path.join(dir, '.npmrc'), 'engine-strict=true\n');
+    fs.writeFileSync(path.join(dir, 'readme.md'), '# External profile fixture\n');
+
+    const result = run(['target', 'profile', '--json', '--target', dir]);
+    const output = readJsonOutput(result);
+    assert.strictEqual(output.status, 'ok');
+    assert.ok(output.profile.package_managers.some((manager) => manager.name === 'npm' && manager.source === '.npmrc'));
+    assert.ok(output.profile.docs.includes('readme.md'));
+    assert.strictEqual(output.writes_performed, false);
+    assert.strictEqual(fs.existsSync(path.join(dir, '.agent-onboard')), false);
+
+    const textResult = run(['target', 'profile', '--text', '--target', dir]);
+    assert.strictEqual(textResult.status, 0, textResult.stderr || textResult.stdout);
+    assert.ok(textResult.stdout.includes('Package managers: npm'));
+    assert.ok(textResult.stdout.includes('Docs: readme.md'));
+  });
+
+
   fullSourceTest('target metadata validates pilot-style manifest and comment-header metadata without writes', () => {
     const dir = tempRepo();
     fs.writeFileSync(path.join(dir, 'README.md'), [

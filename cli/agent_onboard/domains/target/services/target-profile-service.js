@@ -183,6 +183,14 @@ function createTargetProfileService(deps) {
       .filter((marker) => marker.scripts.length > 0);
   }
 
+  function detectedDocs(root) {
+    const desired = new Set(TARGET_DOCTOR_DOC_FILES.map((relativePath) => relativePath.toLowerCase()));
+    return fs.readdirSync(root, { withFileTypes: true })
+      .filter((entry) => entry.isFile() && desired.has(entry.name.toLowerCase()))
+      .map((entry) => entry.name)
+      .sort((left, right) => left.localeCompare(right));
+  }
+
   function targetProfileData(root) {
     const pkgProfile = packageJsonProfile(root);
     return {
@@ -192,7 +200,7 @@ function createTargetProfileService(deps) {
       frameworks: detectedFrameworks(pkgProfile),
       scripts: detectedScripts(pkgProfile),
       ci: detectedCi(root),
-      docs: existingRelativeFiles(root, TARGET_DOCTOR_DOC_FILES),
+      docs: detectedDocs(root),
       git_present: fs.existsSync(path.join(root, '.git'))
     };
   }

@@ -1,0 +1,452 @@
+# P2 — Repository Control Plane v2 Architecture Overhaul
+
+Status: active architecture program  
+Program: `P2`  
+Current stage: `P2S1 — Evidence and Contract Freeze`  
+Decision posture: evidence before protocol, protocol before implementation, implementation spike before migration.
+
+## 1. Purpose
+
+P2 is a major architecture and product-protocol overhaul. It is not a language rewrite program and it does not pre-commit the project to Go, OCI, a new task tracker, or a new policy language.
+
+The program exists because the v1 implementation has accumulated a large compatibility and migration surface while the durable product thesis can be stated much more narrowly:
+
+> agent-onboard makes repository authority deterministic, portable, resolvable, and enforceable across coding-agent runtimes.
+
+P2 must reduce the number of concepts an agent or maintainer must understand before useful work. Any implementation change that preserves or increases v1 complexity without a measured product benefit is a failed P2 outcome.
+
+## 2. Baseline census
+
+Measured from the source repository at the start of P2S1 after the first cold-start regression patch:
+
+| Surface | Baseline |
+| --- | ---: |
+| CLI JavaScript modules | 138 |
+| CLI JavaScript lines | 36,491 |
+| Domain JavaScript modules | 124 |
+| Domain JavaScript lines | 33,478 |
+| `architecture` domain | 13,490 lines |
+| `target` domain | 8,172 lines |
+| `package` domain | 6,994 lines |
+| `core` domain | 2,445 lines |
+| `work-items` domain | 1,820 lines |
+| `authority` domain | 454 lines |
+| `runtime-composer.js` | 934 lines / 47,756 bytes |
+| User-facing top-level command tokens | 26 |
+| Runtime schema identifiers detected | 371 |
+| `.agent-onboard` files | 132 |
+| `.agent-onboard` JSON files | 113 |
+| `.agent-onboard` JSONL files | 19 |
+| `.agent-onboard` bytes | ~1.22 MB |
+
+The import graph has no known source-module cycle. The problem is therefore not primarily circular dependencies. The dominant risks are public-surface breadth, state fragmentation, compatibility/history machinery living too close to product runtime, and a mutable composition model that makes service capability boundaries harder to reason about.
+
+The `architecture` domain alone is roughly forty percent of domain LOC. P2 treats that as a strong signal that migration history has become part of the runtime architecture and must be classified before anything is ported.
+
+## 3. Evidence from external cold-start testing
+
+The first external trial found three concrete v1 issues:
+
+1. `.npmrc` was ignored as npm evidence when no lockfile or `packageManager` field existed.
+2. conventional lowercase `readme.md` was missed because root documentation detection was case-sensitive.
+3. `agents --preview --target <path>` silently ignored an unsupported argument and used the current working directory.
+
+`W1` fixes these without expanding the public `agents` command surface:
+
+- `.npmrc` is npm package-manager evidence;
+- root conventional docs are detected case-insensitively while preserving the actual filename;
+- `agents` rejects unsupported arguments and therefore fails closed instead of routing implicitly.
+
+The trial also exposed a product-measurement problem: an aggregate readiness score can over-reward installation of agent-onboard metadata and under-represent pre-existing repository operability. P2 must use evidence-backed checks before considering any aggregate readiness score.
+
+## 4. Prior-art boundary
+
+P2 does not compete by rebuilding adjacent layers.
+
+### Instructions
+
+`AGENTS.md` is a simple, tool-agnostic instruction convention and supports repository-local/nested guidance. P2 treats it as an instruction layer, not as machine-verifiable authority.
+
+Reference: https://agents.md/
+
+### Task and work state
+
+Projects such as Beads already provide dependency-aware agent work tracking, ready-work discovery, claim/close workflows, and durable repository-associated state. P2 therefore does not require agent-onboard to own the canonical task database.
+
+Reference: https://github.com/steveyegge/beads
+
+### Specs and intent
+
+Spec Kit and OpenSpec already occupy spec/plan/task/change workflows. P2 should discover or adapt to those systems rather than implement a competing specification framework.
+
+References:
+
+- https://github.com/github/spec-kit
+- https://github.com/Fission-AI/OpenSpec
+
+### Policy engines
+
+OPA separates policy decision-making from policy enforcement. Cedar models authorization around principal, action, resource, and request context. Both are useful architectural references, but P2 v2 should not require users to learn Rego or Cedar for basic repository policy.
+
+References:
+
+- https://www.openpolicyagent.org/docs
+- https://docs.cedarpolicy.com/
+
+### OCI and attestations
+
+OCI Image/Distribution 1.1 provides `artifactType`, `subject`, and referrers for attaching metadata artifacts to immutable OCI subjects. in-toto v1 statements bind typed predicates to subject digests. P2 should reuse those layers instead of inventing a proprietary attestation envelope or registry protocol.
+
+References:
+
+- https://opencontainers.org/posts/blog/2024-03-13-image-and-distribution-1-1/
+- https://github.com/in-toto/attestation/tree/main/spec/v1
+- https://docs.sigstore.dev/
+
+## 5. Product boundary
+
+### P2 owns
+
+- repository operability discovery;
+- repository-declared authority;
+- deterministic authority resolution;
+- plan-before-apply mutation contracts;
+- evidence explaining a resolved decision;
+- provider discovery for work/spec systems;
+- adapters that translate resolved authority into runtime-specific enforcement surfaces;
+- portable operability snapshots and attestable predicates.
+
+### P2 does not own
+
+- a general task tracker;
+- a specification-driven-development framework;
+- a multi-agent orchestrator;
+- an LLM memory database;
+- a generic policy language;
+- an identity provider;
+- a container runtime;
+- a PKI/signing ecosystem;
+- an OCI registry;
+- a repository-context packing engine.
+
+Non-goals are architectural constraints. Adding one requires an explicit P2 decision record rather than incidental implementation growth.
+
+## 6. Authority model
+
+P2 separates three layers that v1 documentation can currently blur:
+
+### Declared
+
+Repository-owned policy describes intended decisions.
+
+Initial decision vocabulary:
+
+- `allow`
+- `review`
+- `deny`
+
+### Resolved
+
+The core deterministically evaluates a request against repository policy. Resolution is local, LLM-free, explainable, and fail-closed for unknown safety-critical state.
+
+A request conceptually contains:
+
+- principal;
+- action;
+- resource/scope;
+- request context;
+- policy source;
+- identity assurance.
+
+The shape is influenced by Cedar's principal/action/resource/context model without adopting Cedar syntax as the default repository format.
+
+### Enforced
+
+An execution adapter applies a resolved decision using capabilities available in a specific runtime. A repository declaration is not described as enforced unless an integration can demonstrate the enforcement boundary.
+
+Examples include coding-agent permission/sandbox surfaces, MCP tool policy, CI gates, or an optional OCI runtime adapter.
+
+The core must report enforcement level explicitly, for example `declared_only`, `resolved`, or an adapter-specific enforced state.
+
+## 7. Identity assurance
+
+P2 must distinguish asserted identity from verified identity.
+
+A string such as `agent:codex` is not cryptographic authentication. Policy decisions may still use it, but the result must carry an assurance level.
+
+Possible assurance classes:
+
+- `anonymous`;
+- `asserted`;
+- `verified`.
+
+Verified identity may later come from CI OIDC, Sigstore identity, workload identity, or another adapter. None of those systems is required for local repository inspection.
+
+## 8. Protocol v2 hypothesis
+
+This is a hypothesis for P2S2, not a frozen contract.
+
+The canonical first-read machine surface should target no more than two files:
+
+```text
+AGENTS.md
+.agent-onboard/control.json
+.agent-onboard/authority.json
+```
+
+`AGENTS.md` remains prose instructions. `control.json` is a compact discovery/root document. `authority.json` is structured current policy.
+
+A possible `control.json` shape:
+
+```json
+{
+  "schema": "aob.dev/control/v2",
+  "authority": "authority.json",
+  "work": { "provider": "github" },
+  "spec": { "provider": "none" }
+}
+```
+
+Provider state is not copied into the control file. Local v1 work-items may become one provider among GitHub Issues, Beads, or future integrations.
+
+Optional JSONL may remain appropriate for append-only audit/evidence, but no event log becomes canonical merely because v1 already has one.
+
+Protocol principles:
+
+- Markdown = meaning/instructions;
+- JSON = current structured truth;
+- JSONL = optional append-only history/evidence;
+- filenames are part of the discovery API;
+- canonical surface must be much smaller than implementation surface;
+- no registry/network dependency is required to understand a local repo.
+
+## 9. Core architecture hypothesis
+
+If Go passes the P2S3 gate, the target dependency direction is:
+
+```text
+CLI
+  -> application use cases
+      -> domain
+          -> ports/interfaces
+              <- filesystem / providers / adapters
+```
+
+No mutable service-locator equivalent should replace `Object.assign(context, service)`.
+
+Capabilities should be explicit. For example, a read-only doctor use case receives a read interface and cannot write by construction; mutation use cases receive a separate write capability only after authority has been resolved.
+
+The first Go spike implements read-only behavior only:
+
+- status;
+- profile;
+- doctor;
+- resolve.
+
+Go is accepted only if it materially simplifies the equivalent slice while preserving semantic compatibility. Runtime speed alone is not sufficient justification.
+
+## 10. OCI integration hypothesis
+
+OCI is an integration and distribution layer, not the canonical live repository database.
+
+Repository truth flows outward:
+
+```text
+repository -> resolved control snapshot -> OCI artifact / attestation
+```
+
+Local inspection must remain fully operable without Docker, containerd, ORAS, an OCI registry, or network access.
+
+### OCI artifact use
+
+A future adapter may package a control/operability snapshot as an OCI artifact and attach it to an image, binary, or other OCI subject through the OCI 1.1 subject/referrers model.
+
+### Attestation use
+
+P2 should define only an agent-operability predicate. It should reuse an in-toto Statement v1 envelope to bind the predicate to immutable subject digests, and reuse Sigstore/GitHub attestation mechanisms for signing/verification where available.
+
+P2 must not create proprietary equivalents for:
+
+- OCI registries;
+- in-toto statements;
+- signing key formats;
+- transparency logs.
+
+### OCI runtime use
+
+An optional runtime adapter may compile resolved authority into OCI runtime restrictions where the runtime has appropriate primitives. This is an enforcement adapter, not a dependency of the core.
+
+## 11. P2 execution program
+
+### P2S1 — Evidence and Contract Freeze
+
+Goal: determine what v1 actually promises before changing the protocol.
+
+#### P2S1M1 — Current Reality Baseline
+
+- `W1` External cold-start detection hardening.
+- `W2` Architecture baseline census and P2 decision dossier.
+- `W3` Command/schema/state classification and v1 semantic oracle.
+
+#### P2S1M2 — External Fixture Corpus
+
+Freeze representative repositories instead of following remote heads:
+
+- small Node library;
+- Node application;
+- Python package;
+- Go CLI;
+- monorepo;
+- minimal repo;
+- messy legacy repo;
+- repo with nested AGENTS.md;
+- repo with external work provider;
+- repo with spec/change provider.
+
+Measure detection correctness, false positives/negatives, files/bytes read, output stability, and source-tree mutation hashes.
+
+#### Gate G1 — public v1 understood
+
+G1 passes only when each significant command/schema/state surface is classified as one of:
+
+- public semantic contract;
+- compatibility projection;
+- derived cache/index;
+- audit/history;
+- internal/release-dev;
+- migration history eligible for retirement.
+
+No P2 protocol deletion occurs before G1.
+
+### P2S2 — Protocol v2 RFC
+
+Produce decision records for:
+
+1. product boundary/non-goals;
+2. canonical files;
+3. authority decision model;
+4. declared/resolved/enforced semantics;
+5. principal assurance;
+6. work provider interface;
+7. spec provider interface;
+8. audit/event semantics;
+9. v1/v2 compatibility projection;
+10. OCI mapping;
+11. in-toto predicate;
+12. runtime adapter contract.
+
+#### Gate G2 — protocol smaller than v1
+
+G2 requires:
+
+- no more than two canonical machine-readable first-read files;
+- deterministic local authority resolution;
+- no mandatory task/spec duplication;
+- offline inspection;
+- fail-closed unknown authority;
+- a migration/projection strategy for selected v1 contracts.
+
+### P2S3 — Go Core Parity Spike
+
+Implement only the frozen read-only slice and run it side-by-side with v1 across the fixture corpus.
+
+#### Gate G3 — Go / no-Go
+
+Go wins only if all selected semantic contracts reach parity, read-only operations mutate zero files, dependencies are explicit, supported cross-platform builds are demonstrated, npm UX remains viable, and implementation complexity is materially lower than the equivalent JS slice.
+
+If Go fails the gate, protocol simplification continues using JS. P2 is not blocked on a language choice.
+
+### P2S4 — Authority Kernel
+
+Implement typed action/resource/principal/context resolution, decision explanation, identity assurance, and policy-source evidence.
+
+### P2S5 — Plan / Apply and Providers
+
+Every mutation follows:
+
+```text
+Inspect -> Plan -> Resolve authority -> Review if required -> Apply -> Evidence
+```
+
+Introduce work/spec provider interfaces without requiring every provider to support mutation.
+
+### P2S6 — OCI and Attestation
+
+Prototype local OCI layout/inspection first, then remote attach/pull only after the predicate and media-type contract stabilizes.
+
+#### Gate G4 — independently verifiable artifact chain
+
+Demonstrate:
+
+```text
+source -> control snapshot -> OCI digest -> typed attestation -> independent verification
+```
+
+### P2S7 — Runtime Enforcement Adapters
+
+Adapters translate resolved authority to external runtimes. Core remains runtime-neutral.
+
+### P2S8 — CLI Reset
+
+Target a budget of 5–8 primary commands. Advanced, migration, and release-dev surfaces move behind subcommands or source tooling instead of remaining permanent top-level product concepts.
+
+### P2S9 — Distribution and Supply Chain
+
+If Go wins, canonical binaries come from reproducible release builds. npm remains a thin distribution/launcher experience where useful. Release artifacts should use existing provenance/attestation ecosystems rather than custom signing formats.
+
+### P2S10 — Cutover and Legacy Retirement
+
+P2 is successful only when legacy code/state can be deleted or isolated. A final system containing the entire v1 runtime plus a new Go runtime is a failed migration outcome.
+
+## 12. Metrics and budgets
+
+P2 treats complexity as a release metric alongside correctness.
+
+Track at every gate:
+
+- CLI/runtime LOC;
+- module/package count;
+- public command count;
+- public schema count;
+- canonical state-file count;
+- first-read bytes/files;
+- dependency count;
+- fixture correctness;
+- read-only mutation count;
+- compatibility coverage.
+
+Desired direction is monotonic reduction for public concepts and canonical state. Growth requires a recorded rationale.
+
+## 13. Safety and compatibility principles
+
+- Unknown safety-critical authority fails closed.
+- Read-only commands do not receive hidden write behavior.
+- `--write` remains explicit during migration.
+- Plan output is evidence, not permission.
+- Instructions are not described as enforcement.
+- Derived indexes never become authority merely for performance.
+- No binary state backend is introduced before protocol/state ownership is frozen.
+- No external provider becomes mandatory for local inspection.
+- No v1 public semantic contract is removed before its classification and migration disposition are recorded.
+
+## 14. Release 0.1.2 foundation
+
+The P2 foundation release intentionally does not change the existing runtime release-line identifier. P2S1 exists to freeze and classify the v1 public contract before a new release-line contract is declared.
+
+The source release contains:
+
+- the external cold-start regression fixes from `W1`;
+- this P2 architecture dossier and measured baseline;
+- P2 work-item lifecycle state;
+- package version `0.1.2`;
+- no Go runtime and no OCI runtime dependency yet.
+
+This keeps the first P2 release reversible and evidence-oriented.
+
+## 15. Immediate next work
+
+After this dossier is validated, `W3` becomes the next work item:
+
+> classify the 26 command tokens, runtime schemas, and repository state artifacts; build the semantic v1 oracle used by G1.
+
+Only after G1 passes should P2S2 freeze the v2 protocol or admit a Go parity spike.

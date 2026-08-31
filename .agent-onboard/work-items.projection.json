@@ -15,12 +15,12 @@
     "mdbx_current_source_of_truth": false
   },
   "counts": {
-    "open": 0,
+    "open": 1,
     "claimed": 0,
-    "closed": 193,
-    "programs": 1,
-    "stages": 3,
-    "milestones": 10,
-    "work_items": 193
+    "closed": 195,
+    "programs": 2,
+    "stages": 4,
+    "milestones": 11,
+    "work_items": 196
   }
 }

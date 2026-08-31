@@ -29,6 +29,10 @@ Bridge marker block: `AGENTS.md` may contain the bounded `agent-onboard:bridge` 
 
 Work-item semantics remain delegated to `agent-onboard`.
 
+## P2 architecture overhaul boundary
+
+`P2` is the active Repository Control Plane v2 architecture-overhaul program. Its decision dossier is `docs/p2-architecture-overhaul.md`. P2 is evidence-gated: P2S1 freezes and classifies the v1 semantic contract before any protocol cutover; P2S2 may simplify the canonical protocol only after G1; a Go core is a P2S3 parity spike and is not yet the canonical runtime; OCI/in-toto/Sigstore work is an optional distribution/attestation integration and is not a dependency for local repository inspection. Until a later admitted cutover, the v1 authority order and mutation boundaries in this file remain authoritative.
+
 
 ## Runtime composer decomposition boundary
 
