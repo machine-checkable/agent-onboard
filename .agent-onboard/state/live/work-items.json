@@ -5,12 +5,12 @@
   "authority_role": "compatibility_live_projection",
   "projection_of": "canonical_sharded_work_items_authority",
   "legacy_full_projection": false,
-  "item_count": 198,
+  "item_count": 199,
   "open_count": 0,
   "claimed_count": 0,
-  "closed_count": 198,
-  "latest_work_item_id": "P2S1M2W2",
-  "latest_closed_work_item_id": "P2S1M2W2",
+  "closed_count": 199,
+  "latest_work_item_id": "P2S1M2W3",
+  "latest_closed_work_item_id": "P2S1M2W3",
   "rebuildable_from": [
     ".agent-onboard/state/authority/work-items/manifest.json",
     ".agent-onboard/state/authority/work-items/items/index.json",
@@ -24,23 +24,16 @@
   "counts": {
     "open": 0,
     "claimed": 0,
-    "closed": 198,
+    "closed": 199,
     "programs": 2,
     "stages": 4,
     "milestones": 12,
-    "work_items": 198
+    "work_items": 199
   },
-  "current_work_item": "P2S1M2W2",
+  "current_work_item": "P2S1M2W3",
   "next_open_work_item": null,
-  "updated_at": "2026-09-02T14:20:37.971Z",
+  "updated_at": "2026-09-02T15:49:41.720Z",
   "latest_closed_work_items": [
-    {
-      "id": "P2S1M1W1",
-      "title": "External cold-start detection hardening",
-      "status": "closed",
-      "milestone_id": "P2S1M1",
-      "domain": null
-    },
     {
       "id": "P2S1M1W2",
       "title": "Architecture baseline census and P2 decision dossier",
@@ -65,6 +58,13 @@
     {
       "id": "P2S1M2W2",
       "title": "Immutable representative external fixture corpus capture",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W3",
+      "title": "Deterministic external fixture corpus measurement and G1 evidence",
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null

@@ -3,7 +3,7 @@
   "package_name": "agent-onboard",
   "source": ".agent-onboard/work-items.json",
   "milestone_id": "P2S1M2",
-  "item_count": 2,
+  "item_count": 3,
   "items": [
     {
       "id": "P2S1M2W1",
@@ -27,6 +27,17 @@
         "note": "Capture 10 immutable synthetic external fixture snapshots under the frozen W1 corpus contract"
       },
       "closure_ref": "closures:P2S1M2W2"
+    },
+    {
+      "id": "P2S1M2W3",
+      "milestone_id": "P2S1M2",
+      "title": "Deterministic external fixture corpus measurement and G1 evidence",
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-09-02T15:40:13.755Z"
+      },
+      "closure_ref": "closures:P2S1M2W3"
     }
   ]
 }

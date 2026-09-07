@@ -84,10 +84,10 @@
     {
       "path": ".agent-onboard/work-items.json",
       "category": "authority_registry",
-      "current_lines": 1913,
-      "admitted_reason": "P2S1M2 W2 exact corpus-capture closure growth; generalized ceilings unchanged.",
+      "current_lines": 1924,
+      "admitted_reason": "P2S1M2 W3 exact post-close lifecycle/ratchet metadata growth; generalized god/near-god ceilings unchanged.",
       "next_reduction_gate": "P2S1M2",
-      "current_bytes": 55386
+      "current_bytes": 55713
     },
     {
       "path": "README.md",
@@ -100,10 +100,10 @@
     {
       "path": ".agent-onboard/source-size-budget-ratchet.json",
       "category": "authority_registry",
-      "current_lines": 5000,
-      "current_bytes": 200000,
-      "admitted_reason": "W22 refreshes source-size ratchet metadata for target metadata service split; self-ratchet registry remains admitted migration debt.",
-      "next_reduction_gate": "P1S3M7W23",
+      "current_lines": 4899,
+      "current_bytes": 213292,
+      "admitted_reason": "P2S1M2 W3 exact post-close authority/self-ratchet metadata growth; generalized god/near-god ceilings unchanged.",
+      "next_reduction_gate": "P2S1M2",
       "current_bytes_max": 220000,
       "note": "W21 admits self-ratchet metadata growth under bounded source-size ratchet refresh; this remains migration debt for a later registry compaction gate."
     }

@@ -87,13 +87,13 @@
   "tracked_files": {
     ".agent-onboard/state/closures/work-items-closures.jsonl": {
       "category": "authority_state",
-      "max_lines": 197,
-      "max_bytes": 90153,
+      "max_lines": 198,
+      "max_bytes": 90609,
       "baseline_lines": 168,
       "baseline_bytes": 76889,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2 W3 exact post-close lifecycle/authority growth; generalized size ceilings unchanged.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W33",
@@ -335,18 +335,27 @@
           "new_max_lines": 196,
           "previous_max_bytes": 89379,
           "new_max_bytes": 89697
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close)",
+          "reason": "Exact W3 closure/compaction lifecycle growth; generalized category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 197,
+          "new_max_lines": 198,
+          "previous_max_bytes": 90153,
+          "new_max_bytes": 90609
         }
       ]
     },
     ".agent-onboard/state/live/work-items.json": {
       "category": "authority_state",
       "max_lines": 73,
-      "max_bytes": 2093,
+      "max_bytes": 2119,
       "baseline_lines": 24,
       "baseline_bytes": 849,
       "target_lines": 60,
       "target_bytes": 8192,
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M2 W3 exact post-close lifecycle/authority growth; generalized size ceilings unchanged.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W6",
@@ -453,18 +462,27 @@
           "new_max_bytes": 2085,
           "previous_max_lines": 73,
           "previous_max_bytes": 2108
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close)",
+          "reason": "Exact W3 closure/compaction lifecycle growth; generalized category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 73,
+          "new_max_lines": 73,
+          "previous_max_bytes": 2093,
+          "new_max_bytes": 2119
         }
       ]
     },
     ".agent-onboard/work-items.json": {
       "category": "authority_registry",
-      "max_lines": 1913,
-      "max_bytes": 55386,
+      "max_lines": 1924,
+      "max_bytes": 55713,
       "baseline_lines": 1573,
       "baseline_bytes": 44798,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2 W3 exact post-close lifecycle/authority growth; generalized size ceilings unchanged.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W33",
@@ -711,6 +729,24 @@
           "new_max_lines": 1901,
           "previous_max_bytes": 54914,
           "new_max_bytes": 54955
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (pre-close)",
+          "reason": "Exact admitted growth from W3 claim/projection synchronization; no generalized budget increase.",
+          "previous_max_lines": 1913,
+          "new_max_lines": 1923,
+          "previous_max_bytes": 55386,
+          "new_max_bytes": 55672
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close)",
+          "reason": "Exact W3 closure/compaction lifecycle growth; generalized category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 1923,
+          "new_max_lines": 1924,
+          "previous_max_bytes": 55672,
+          "new_max_bytes": 55713
         }
       ]
     },
@@ -1797,13 +1833,13 @@
     },
     ".agent-onboard/source-size-budget-ratchet.json": {
       "category": "authority_registry",
-      "max_lines": 4782,
-      "max_bytes": 207619,
+      "max_lines": 4899,
+      "max_bytes": 213292,
       "baseline_lines": 4602,
       "baseline_bytes": 200572,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "W1 exact ratchet metadata growth only; generalized source-size and god-file ceilings unchanged.",
+      "reason": "P2S1M2 W3 exact self-ratchet metadata growth from post-close ratchet history; bounded by existing self-ratchet admission.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W2",
@@ -2093,6 +2129,33 @@
           "new_max_lines": 4700,
           "previous_max_bytes": 199900,
           "new_max_bytes": 205000
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (pre-close self-ratchet)",
+          "reason": "Self-ratchet registry grew only because exact W3 maxima/history were recorded; no category or god/near-god ceiling changed.",
+          "previous_max_lines": 4782,
+          "new_max_lines": 4818,
+          "previous_max_bytes": 207619,
+          "new_max_bytes": 209463
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close) self-ratchet",
+          "reason": "Self-ratchet registry growth records only exact W3 post-close maxima; existing bounded self-ratchet admission retained.",
+          "previous_max_lines": 4827,
+          "new_max_lines": 4881,
+          "previous_max_bytes": 209951,
+          "new_max_bytes": 212526
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close authority self-ratchet)",
+          "reason": "Self-ratchet metadata growth records exact W3 authority refresh only.",
+          "previous_max_lines": 4881,
+          "new_max_lines": 4899,
+          "previous_max_bytes": 212526,
+          "new_max_bytes": 213292
         }
       ],
       "current_bytes_max": 177850,
@@ -2560,8 +2623,8 @@
     },
     ".agent-onboard/state/authority/work-items/items/index.json": {
       "category": "authority_state",
-      "max_lines": 584,
-      "max_bytes": 13462,
+      "max_lines": 587,
+      "max_bytes": 13525,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2746,18 +2809,36 @@
           "new_max_lines": 583,
           "previous_max_bytes": 13390,
           "new_max_bytes": 13412
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (pre-close)",
+          "reason": "Exact admitted growth from W3 claim/projection synchronization; no generalized budget increase.",
+          "previous_max_lines": 584,
+          "new_max_lines": 587,
+          "previous_max_bytes": 13462,
+          "new_max_bytes": 13503
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close)",
+          "reason": "Exact W3 closure/compaction lifecycle growth; generalized category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 587,
+          "new_max_lines": 587,
+          "previous_max_bytes": 13503,
+          "new_max_bytes": 13525
         }
       ],
       "target_lines": 500,
       "target_bytes": 65536,
       "baseline_lines": 484,
       "baseline_bytes": 10953,
-      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet."
+      "reason": "P2S1M2 W3 exact post-close lifecycle/authority growth; generalized size ceilings unchanged."
     },
     ".agent-onboard/state/authority/work-items/manifest.json": {
       "category": "authority_state",
       "max_lines": 136,
-      "max_bytes": 5784,
+      "max_bytes": 5785,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2835,18 +2916,27 @@
           "new_max_lines": 136,
           "previous_max_bytes": 5500,
           "new_max_bytes": 5784
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (pre-close)",
+          "reason": "Exact admitted growth from W3 claim/projection synchronization; no generalized budget increase.",
+          "previous_max_lines": 136,
+          "new_max_lines": 136,
+          "previous_max_bytes": 5784,
+          "new_max_bytes": 5785
         }
       ],
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2 W3 exact measurement-evidence lifecycle/index growth; generalized size ceilings unchanged.",
       "baseline_lines": 124,
       "baseline_bytes": 5215
     },
     ".agent-onboard/state/indexes/work-items.index.json": {
       "category": "authority_state",
-      "max_lines": 528,
-      "max_bytes": 10710,
+      "max_lines": 531,
+      "max_bytes": 10798,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2941,11 +3031,29 @@
           "new_max_lines": 527,
           "previous_max_bytes": 10625,
           "new_max_bytes": 10646
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (pre-close)",
+          "reason": "Exact admitted growth from W3 claim/projection synchronization; no generalized budget increase.",
+          "previous_max_lines": 528,
+          "new_max_lines": 531,
+          "previous_max_bytes": 10710,
+          "new_max_bytes": 10777
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close)",
+          "reason": "Exact W3 closure/compaction lifecycle growth; generalized category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 531,
+          "new_max_lines": 531,
+          "previous_max_bytes": 10777,
+          "new_max_bytes": 10798
         }
       ],
       "target_lines": 700,
       "target_bytes": 65536,
-      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2 W3 exact post-close lifecycle/authority growth; generalized size ceilings unchanged.",
       "baseline_lines": 524,
       "baseline_bytes": 11312
     },
@@ -3115,7 +3223,7 @@
     ".agent-onboard/state/live-authority.json": {
       "category": "authority_state",
       "max_lines": 56,
-      "max_bytes": 1902,
+      "max_bytes": 1934,
       "target_lines": 500,
       "target_bytes": 65536,
       "ratchet_history": [
@@ -3204,9 +3312,18 @@
           "new_max_lines": 56,
           "previous_max_bytes": 1877,
           "new_max_bytes": 1902
+        },
+        {
+          "work_item_id": "P2S1M2W3",
+          "gate": "Deterministic external fixture corpus measurement and G1 evidence (post-close authority refresh)",
+          "reason": "Exact W3 post-close authority shard refresh; no generalized budget increase.",
+          "previous_max_lines": 56,
+          "new_max_lines": 56,
+          "previous_max_bytes": 1902,
+          "new_max_bytes": 1934
         }
       ],
-      "reason": "P2S1M2 W1 exact authority-state refresh after fixture-contract lifecycle closure; generalized ceilings unchanged.",
+      "reason": "P2S1M2 W3 exact post-close authority refresh.",
       "baseline_lines": 56,
       "baseline_bytes": 1871
     },

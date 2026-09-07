@@ -9,14 +9,14 @@
   "counts": {
     "open": 0,
     "claimed": 0,
-    "closed": 198,
+    "closed": 199,
     "programs": 2,
     "stages": 4,
     "milestones": 12,
-    "work_items": 198
+    "work_items": 199
   },
-  "latest_work_item_id": "P2S1M2W2",
-  "latest_closed_work_item_id": "P2S1M2W2",
+  "latest_work_item_id": "P2S1M2W3",
+  "latest_closed_work_item_id": "P2S1M2W3",
   "by_status": {
     "open": [],
     "claimed": [],
@@ -218,7 +218,8 @@
       "P2S1M1W2",
       "P2S1M1W3",
       "P2S1M2W1",
-      "P2S1M2W2"
+      "P2S1M2W2",
+      "P2S1M2W3"
     ]
   },
   "by_milestone": {
@@ -442,7 +443,8 @@
     ],
     "P2S1M2": [
       "P2S1M2W1",
-      "P2S1M2W2"
+      "P2S1M2W2",
+      "P2S1M2W3"
     ]
   },
   "item_shards": [
@@ -537,21 +539,14 @@
     {
       "milestone_id": "P2S1M2",
       "path": ".agent-onboard/state/authority/work-items/items/by-milestone/P2S1M2.json",
-      "item_count": 2,
-      "bytes": 971,
-      "sha256": "3b6006db2296359a777883235ea91f28b97ff9fa3bb42972517b7fd6dd18e4ab",
-      "file_id": "ni:///sha-256;O2AG2yKWNZp3eIMjXqkfKLl_-fo7tClyUXt_1t0Y5Ks"
+      "item_count": 3,
+      "bytes": 1298,
+      "sha256": "bad9492859c026480a5ef9467675b38d5d4c4293d24acecacbf77963bd739d2c",
+      "file_id": "ni:///sha-256;utlJKFnAJkgKXvlGdnWzjV1MQpPSSs7Ky_d5Y71znSw"
     }
   ],
-  "updated_at": "2026-09-02T14:20:37.971Z",
+  "updated_at": "2026-09-02T15:49:41.720Z",
   "latest_closed_work_items": [
-    {
-      "id": "P2S1M1W1",
-      "title": "External cold-start detection hardening",
-      "status": "closed",
-      "milestone_id": "P2S1M1",
-      "domain": null
-    },
     {
       "id": "P2S1M1W2",
       "title": "Architecture baseline census and P2 decision dossier",
@@ -576,6 +571,13 @@
     {
       "id": "P2S1M2W2",
       "title": "Immutable representative external fixture corpus capture",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W3",
+      "title": "Deterministic external fixture corpus measurement and G1 evidence",
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null

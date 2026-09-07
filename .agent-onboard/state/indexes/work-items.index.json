@@ -6,22 +6,15 @@
   "legacy_root_projection": ".agent-onboard/work-items.json",
   "live_projection": ".agent-onboard/state/live/work-items.json",
   "closure_payload_authority": ".agent-onboard/state/closures/work-items/manifest.json",
-  "item_count": 198,
+  "item_count": 199,
   "open_count": 0,
   "claimed_count": 0,
-  "closed_count": 198,
+  "closed_count": 199,
   "inline_closure_count": 0,
   "closure_ref_count": 197,
-  "latest_work_item_id": "P2S1M2W2",
-  "latest_closed_work_item_id": "P2S1M2W2",
+  "latest_work_item_id": "P2S1M2W3",
+  "latest_closed_work_item_id": "P2S1M2W3",
   "latest_work_items": [
-    {
-      "id": "P2S1M1W1",
-      "title": "External cold-start detection hardening",
-      "status": "closed",
-      "milestone_id": "P2S1M1",
-      "domain": null
-    },
     {
       "id": "P2S1M1W2",
       "title": "Architecture baseline census and P2 decision dossier",
@@ -46,6 +39,13 @@
     {
       "id": "P2S1M2W2",
       "title": "Immutable representative external fixture corpus capture",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W3",
+      "title": "Deterministic external fixture corpus measurement and G1 evidence",
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null
@@ -53,13 +53,6 @@
   ],
   "latest_closed_work_items": [
     {
-      "id": "P2S1M1W1",
-      "title": "External cold-start detection hardening",
-      "status": "closed",
-      "milestone_id": "P2S1M1",
-      "domain": null
-    },
-    {
       "id": "P2S1M1W2",
       "title": "Architecture baseline census and P2 decision dossier",
       "status": "closed",
@@ -83,6 +76,13 @@
     {
       "id": "P2S1M2W2",
       "title": "Immutable representative external fixture corpus capture",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W3",
+      "title": "Deterministic external fixture corpus measurement and G1 evidence",
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null
@@ -289,7 +289,8 @@
       "P2S1M1W2",
       "P2S1M1W3",
       "P2S1M2W1",
-      "P2S1M2W2"
+      "P2S1M2W2",
+      "P2S1M2W3"
     ]
   },
   "by_milestone": {
@@ -513,7 +514,8 @@
     ],
     "P2S1M2": [
       "P2S1M2W1",
-      "P2S1M2W2"
+      "P2S1M2W2",
+      "P2S1M2W3"
     ]
   },
   "rebuildable_from": [
@@ -522,7 +524,7 @@
     ".agent-onboard/state/closures/work-items-closures.jsonl",
     ".agent-onboard/state/closures/work-items/manifest.json"
   ],
-  "updated_at": "2026-09-02T14:20:37.971Z",
-  "archived_closure_count": 197,
+  "updated_at": "2026-09-02T15:50:27.056Z",
+  "archived_closure_count": 198,
   "closure_payload_shard_count": 14
 }

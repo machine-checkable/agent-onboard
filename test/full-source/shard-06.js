@@ -327,4 +327,67 @@ module.exports = function registerFullSourceShard(fullSourceTest, context) {
     const closureArchive = readClosureArchiveByRef(dir);
     assert.strictEqual(closureArchive.get(`closures:${id}`).summary, 'Completed the close target');
   });
+
+  fullSourceTest('P2 external fixture corpus measurements remain deterministic and non-mutating', () => {
+    const crypto = require('crypto');
+    const reportPath = path.join(ROOT, 'test', 'fixtures', 'p2-external-corpus-report.json');
+    const corpusPath = path.join(ROOT, 'test', 'fixtures', 'p2-external-corpus.json');
+    const report = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
+    const corpus = JSON.parse(fs.readFileSync(corpusPath, 'utf8'));
+    assert.strictEqual(report.schema, 'agent-onboard-p2-external-fixture-corpus-report-001');
+    assert.strictEqual(report.fixture_count, 10);
+    assert.strictEqual(report.fixture_class_count, 10);
+    assert.strictEqual(report.probe_count, 8);
+    assert.strictEqual(report.measurement_count, 80);
+    assert.strictEqual(report.repeat_run_count, 160);
+    assert.strictEqual(report.fixtures_digest_sha256, corpus.fixtures_digest_sha256);
+    assert.strictEqual(report.tp, 64);
+    assert.strictEqual(report.tn, 16);
+    assert.strictEqual(report.fp, 0);
+    assert.strictEqual(report.fn, 0);
+    assert.strictEqual(report.false_positive_rate, 0);
+    assert.strictEqual(report.false_negative_rate, 0);
+    assert.strictEqual(report.unstable_measurement_count, 0);
+    assert.strictEqual(report.read_set_unstable_count, 0);
+    assert.strictEqual(report.mutation_count, 0);
+    assert.strictEqual(report.semantic_schema_mismatch_count, 0);
+    assert.strictEqual(report.failed_measurement_count, 0);
+    assert.strictEqual(report.external_fixture_corpus_complete, true);
+    assert.strictEqual(report.protocol_deletion_authorized, false);
+
+    const records = [];
+    for (const part of report.measurement_parts) {
+      const absolute = path.join(ROOT, part.path);
+      const bytes = fs.readFileSync(absolute);
+      assert.strictEqual(bytes.length, part.bytes);
+      assert.strictEqual(crypto.createHash('sha256').update(bytes).digest('hex'), part.sha256);
+      const lines = bytes.toString('utf8').trimEnd().split('\n').filter(Boolean);
+      assert.strictEqual(lines.length, part.record_count);
+      for (const line of lines) records.push(JSON.parse(line));
+    }
+    assert.strictEqual(records.length, 80);
+    const sorted = [...records].sort((left, right) =>
+      `${left.fixture_id}\u0000${left.probe_id}\u0000${left.run_index}`.localeCompare(`${right.fixture_id}\u0000${right.probe_id}\u0000${right.run_index}`)
+    );
+    assert.deepStrictEqual(records, sorted);
+    const canonical = records.map((record) => JSON.stringify(record, Object.keys(record).sort()));
+    const digest = crypto.createHash('sha256').update(canonical.join('\n')).digest('hex');
+    assert.strictEqual(digest, report.measurements_digest_sha256);
+    const fixtureProbePairs = new Set();
+    for (const record of records) {
+      fixtureProbePairs.add(`${record.fixture_id}:${record.probe_id}`);
+      assert.strictEqual(record.run_index, 0);
+      assert.strictEqual(record.repeat_count, 2);
+      assert.strictEqual(record.output_stable, true);
+      assert.strictEqual(record.read_set_stable, true);
+      assert.strictEqual(record.mutation_detected, false);
+      assert.strictEqual(record.pre_tree_digest_sha256, record.post_tree_digest_sha256);
+      assert.strictEqual(record.semantic_schema_match, true);
+      assert.strictEqual(record.pass, true);
+      assert.ok(record.detection_outcome === 'tp' || record.detection_outcome === 'tn');
+      assert.strictEqual(record.expected_detection, record.observed_detection);
+    }
+    assert.strictEqual(fixtureProbePairs.size, 80);
+  });
+
 };
