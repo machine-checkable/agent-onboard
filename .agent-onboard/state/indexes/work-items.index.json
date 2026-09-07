@@ -6,22 +6,15 @@
   "legacy_root_projection": ".agent-onboard/work-items.json",
   "live_projection": ".agent-onboard/state/live/work-items.json",
   "closure_payload_authority": ".agent-onboard/state/closures/work-items/manifest.json",
-  "item_count": 197,
+  "item_count": 198,
   "open_count": 0,
   "claimed_count": 0,
-  "closed_count": 197,
+  "closed_count": 198,
   "inline_closure_count": 0,
-  "closure_ref_count": 196,
-  "latest_work_item_id": "P2S1M2W1",
-  "latest_closed_work_item_id": "P2S1M2W1",
+  "closure_ref_count": 197,
+  "latest_work_item_id": "P2S1M2W2",
+  "latest_closed_work_item_id": "P2S1M2W2",
   "latest_work_items": [
-    {
-      "id": "P1S3M7W22",
-      "title": "Public Target Metadata Service Split Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P2S1M1W1",
       "title": "External cold-start detection hardening",
@@ -49,16 +42,16 @@
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null
+    },
+    {
+      "id": "P2S1M2W2",
+      "title": "Immutable representative external fixture corpus capture",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
     }
   ],
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W22",
-      "title": "Public Target Metadata Service Split Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P2S1M1W1",
       "title": "External cold-start detection hardening",
@@ -83,6 +76,13 @@
     {
       "id": "P2S1M2W1",
       "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W2",
+      "title": "Immutable representative external fixture corpus capture",
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null
@@ -288,7 +288,8 @@
       "P2S1M1W1",
       "P2S1M1W2",
       "P2S1M1W3",
-      "P2S1M2W1"
+      "P2S1M2W1",
+      "P2S1M2W2"
     ]
   },
   "by_milestone": {
@@ -511,7 +512,8 @@
       "P2S1M1W3"
     ],
     "P2S1M2": [
-      "P2S1M2W1"
+      "P2S1M2W1",
+      "P2S1M2W2"
     ]
   },
   "rebuildable_from": [
@@ -520,7 +522,7 @@
     ".agent-onboard/state/closures/work-items-closures.jsonl",
     ".agent-onboard/state/closures/work-items/manifest.json"
   ],
-  "updated_at": "2026-09-02T12:15:46.828Z",
-  "archived_closure_count": 196,
+  "updated_at": "2026-09-02T14:20:37.971Z",
+  "archived_closure_count": 197,
   "closure_payload_shard_count": 14
 }

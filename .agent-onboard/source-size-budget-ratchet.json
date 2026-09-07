@@ -87,8 +87,8 @@
   "tracked_files": {
     ".agent-onboard/state/closures/work-items-closures.jsonl": {
       "category": "authority_state",
-      "max_lines": 196,
-      "max_bytes": 89697,
+      "max_lines": 197,
+      "max_bytes": 90153,
       "baseline_lines": 168,
       "baseline_bytes": 76889,
       "target_lines": 500,
@@ -341,7 +341,7 @@
     ".agent-onboard/state/live/work-items.json": {
       "category": "authority_state",
       "max_lines": 73,
-      "max_bytes": 2085,
+      "max_bytes": 2093,
       "baseline_lines": 24,
       "baseline_bytes": 849,
       "target_lines": 60,
@@ -458,8 +458,8 @@
     },
     ".agent-onboard/work-items.json": {
       "category": "authority_registry",
-      "max_lines": 1901,
-      "max_bytes": 54955,
+      "max_lines": 1913,
+      "max_bytes": 55386,
       "baseline_lines": 1573,
       "baseline_bytes": 44798,
       "target_lines": 500,
@@ -2560,8 +2560,8 @@
     },
     ".agent-onboard/state/authority/work-items/items/index.json": {
       "category": "authority_state",
-      "max_lines": 583,
-      "max_bytes": 13412,
+      "max_lines": 584,
+      "max_bytes": 13462,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2845,8 +2845,8 @@
     },
     ".agent-onboard/state/indexes/work-items.index.json": {
       "category": "authority_state",
-      "max_lines": 527,
-      "max_bytes": 10646,
+      "max_lines": 528,
+      "max_bytes": 10710,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",

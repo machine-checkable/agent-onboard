@@ -1896,6 +1896,18 @@
         "claimed_at": "2026-09-02T12:07:23.069Z"
       },
       "closure_ref": "closures:P2S1M2W1"
+    },
+    {
+      "id": "P2S1M2W2",
+      "milestone_id": "P2S1M2",
+      "title": "Immutable representative external fixture corpus capture",
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-09-02T14:12:32.030Z",
+        "note": "Capture 10 immutable synthetic external fixture snapshots under the frozen W1 corpus contract"
+      },
+      "closure_ref": "closures:P2S1M2W2"
     }
   ]
 }

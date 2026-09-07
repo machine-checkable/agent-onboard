@@ -5,10 +5,10 @@
   "release_line": "public_target_metadata_service_split_gate",
   "authority_state_source_layout": "sharded_seed",
   "state_root": ".agent-onboard/state",
-  "current_work_item": "P2S1M2W1",
-  "current_work_item_title": "External fixture corpus contract and deterministic measurement schema",
-  "last_closed_work_item": "P2S1M2W1",
-  "last_closed_title": "External fixture corpus contract and deterministic measurement schema",
+  "current_work_item": "P2S1M2W2",
+  "current_work_item_title": "Immutable representative external fixture corpus capture",
+  "last_closed_work_item": "P2S1M2W2",
+  "last_closed_title": "Immutable representative external fixture corpus capture",
   "default_first_read": true,
   "compact_authority_index_file": ".agent-onboard/authority-index.json",
   "state_command": "agent-onboard authority --state",
@@ -17,13 +17,6 @@
   "raw_growth_files_loaded_by_default": false,
   "file_contents_inlined": false,
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W22",
-      "title": "Public Target Metadata Service Split Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P2S1M1W1",
       "title": "External cold-start detection hardening",
@@ -48,6 +41,13 @@
     {
       "id": "P2S1M2W1",
       "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W2",
+      "title": "Immutable representative external fixture corpus capture",
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null

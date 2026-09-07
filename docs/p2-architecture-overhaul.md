@@ -481,4 +481,3 @@ The deterministic measurement contract covers the six quantities required by the
 W1 freezes only the contract. `external_fixture_corpus_complete` remains false and protocol deletion remains unauthorized until later work items capture representative immutable fixtures and produce measurements conforming to this schema.
 
 P2S1M2 admission/closure adds exactly two canonical authority files: one item shard and one closure-payload shard. The clean baseline moves 350→352 source files and 134→136 `.agent-onboard` files; command, schema, package-surface, and generalized size ceilings do not increase.
-

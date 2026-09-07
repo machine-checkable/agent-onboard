@@ -1,0 +1,297 @@
+{
+  "schema": "agent-onboard-p2-external-fixture-corpus-001",
+  "contract_ref": "docs/p2-architecture-overhaul.md#17-p2s1m2-w1-external-fixture-corpus-contract",
+  "work_item_id": "W2",
+  "source_package_version_source": "package.json#version",
+  "capture_policy": {
+    "network_used": false,
+    "remote_heads_followed": false,
+    "all_fixtures_immutable_by_tree_digest": true,
+    "materialization_encoding": "UTF-8 text bytes exactly as content_utf8",
+    "path_order": "UTF-8 bytewise ascending"
+  },
+  "fixture_count": 10,
+  "fixture_class_count": 10,
+  "positive_fixture_count": 8,
+  "negative_fixture_count": 2,
+  "fixtures_digest_sha256": "9ffe4737ae4d936f535fefdcf5b321f5e6fad5f04e7e69e95db1340b8dd2a754",
+  "fixtures": [
+    {
+      "fixture_id": "node-library",
+      "fixture_class": "node-library",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "765f762505a78233576ba01a5ef5c01622a8e2d928fb2ed2a1ea378a507c5fec",
+      "files": [
+        {
+          "path": "README.md",
+          "content_utf8": "# Node Library Fixture\nA small reusable library.\n",
+          "byte_length": 49,
+          "sha256": "8676dc93c3dc35b0a4a8ff6c0ca29bad02be8970a9faa5621b34e179fdd20468"
+        },
+        {
+          "path": "package.json",
+          "content_utf8": "{\n  \"name\": \"fixture-node-library\",\n  \"version\": \"1.0.0\",\n  \"type\": \"commonjs\",\n  \"main\": \"src/index.js\"\n}\n",
+          "byte_length": 107,
+          "sha256": "200f1e15c6dc9aa85267799ce7b4c1b93d05fe94888e8b9935836672678a616c"
+        },
+        {
+          "path": "src/index.js",
+          "content_utf8": "'use strict';\nmodule.exports = () => 'fixture';\n",
+          "byte_length": 48,
+          "sha256": "a8d36b2d8610bdf2bdb8f9c2cf684957d4df74e502103b3cbe43e1afbdeb976a"
+        }
+      ]
+    },
+    {
+      "fixture_id": "node-application",
+      "fixture_class": "node-application",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "3d3e0752cadf3bc51af95a586682e050d9d730165f13db726f68722fdee9c140",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "content_utf8": "# Agent Instructions\nRun tests before changing server behavior.\n",
+          "byte_length": 64,
+          "sha256": "cae0fcce0ce62dd32215d8f9d2e12fb3f54d9c5bf19ff3865e4182a77a8a991d"
+        },
+        {
+          "path": "package.json",
+          "content_utf8": "{\n  \"name\": \"fixture-node-application\",\n  \"private\": true,\n  \"scripts\": {\n    \"start\": \"node src/server.js\"\n  }\n}\n",
+          "byte_length": 114,
+          "sha256": "3c4f4991486bedc3667614728adea493db7c36ffa835facc9fdacc6936390d99"
+        },
+        {
+          "path": "src/server.js",
+          "content_utf8": "'use strict';\nconsole.log('fixture app');\n",
+          "byte_length": 42,
+          "sha256": "68e4e663da58c181f700b270267e4861dfa9c9a5b185e31c84ff19ee78d3246d"
+        }
+      ]
+    },
+    {
+      "fixture_id": "python-package",
+      "fixture_class": "python-package",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "27dad78cf4d694b8cc6b7bb9bc8931eb0730c53ec0a8c140d878219d0bb8fe59",
+      "files": [
+        {
+          "path": "README.md",
+          "content_utf8": "# Python Package Fixture\n",
+          "byte_length": 25,
+          "sha256": "b896b62dae63aa54167fe429333214a94a37efbee4d2b4db7b71cddb1c64888a"
+        },
+        {
+          "path": "pyproject.toml",
+          "content_utf8": "[project]\nname = \"fixture-python-package\"\nversion = \"1.0.0\"\nrequires-python = \">=3.11\"\n",
+          "byte_length": 87,
+          "sha256": "fa583304fc3d463324ce50d16a281eacad74e7cec3c8dc668882d55b92a16546"
+        },
+        {
+          "path": "src/fixture_pkg/__init__.py",
+          "content_utf8": "VALUE = \"fixture\"\n",
+          "byte_length": 18,
+          "sha256": "52a3ec3417f92382fcd2dff84e14ede0ca9861eb9578d7a3a30930de7558d054"
+        }
+      ]
+    },
+    {
+      "fixture_id": "go-cli",
+      "fixture_class": "go-cli",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "bb2916bf726cae203d33fbff32201512016ea9b76ea7bfecba113d01dca464f9",
+      "files": [
+        {
+          "path": "README.md",
+          "content_utf8": "# Go CLI Fixture\n",
+          "byte_length": 17,
+          "sha256": "53fbda8cac1cc71f4e7d0545fbea46b64a4b3f646e7f9d81d75b56081a9322fe"
+        },
+        {
+          "path": "cmd/fixture/main.go",
+          "content_utf8": "package main\n\nimport \"fmt\"\n\nfunc main() { fmt.Println(\"fixture\") }\n",
+          "byte_length": 67,
+          "sha256": "37bdaa69888f0fbde09c65dc4ca38b55a5a6dd3be4fbcf550319a904208133c2"
+        },
+        {
+          "path": "go.mod",
+          "content_utf8": "module example.invalid/fixture-go-cli\n\ngo 1.22\n",
+          "byte_length": 47,
+          "sha256": "c249443d4aadaf322d0831b365656fb1577dff79f53a71be8bab0da529ed656d"
+        }
+      ]
+    },
+    {
+      "fixture_id": "monorepo",
+      "fixture_class": "monorepo",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "6790c299a2fd376d0bbed9874c2dd102d3f4611c0f7615c1cbeee4ae676a2aa9",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "content_utf8": "# Monorepo Instructions\nRespect package-local instructions when present.\n",
+          "byte_length": 73,
+          "sha256": "998c644889cecf00f23009c850e1051585f391d0ca6225256e0823e44b79dc46"
+        },
+        {
+          "path": "package.json",
+          "content_utf8": "{\n  \"name\": \"fixture-monorepo\",\n  \"private\": true,\n  \"workspaces\": [\n    \"packages/*\"\n  ]\n}\n",
+          "byte_length": 92,
+          "sha256": "797c6a69c57a038a957fc615e97aeddb2ccf4c62e94edba084dbebca692deff5"
+        },
+        {
+          "path": "packages/web/package.json",
+          "content_utf8": "{\n  \"name\": \"@fixture/web\",\n  \"private\": true\n}\n",
+          "byte_length": 48,
+          "sha256": "84213fcd1f39f1a4fb48c3ad16a504905a2c9e36290256be30cf8d1e78412895"
+        },
+        {
+          "path": "services/python/pyproject.toml",
+          "content_utf8": "[project]\nname = \"fixture-monorepo-python\"\nversion = \"1.0.0\"\n",
+          "byte_length": 61,
+          "sha256": "de1f6b0e5bf3e9b1cb31636e9a46332f508775146070abf24857de661038292c"
+        }
+      ]
+    },
+    {
+      "fixture_id": "minimal-repo",
+      "fixture_class": "minimal-repo",
+      "source_kind": "synthetic",
+      "expected_detection": "negative",
+      "tree_digest_sha256": "e448c07f3f455748df709ed405dea591f75a59472ac2da9073cd44c0553bb8ec",
+      "files": [
+        {
+          "path": "README.md",
+          "content_utf8": "# Minimal Fixture\nNo ecosystem or agent-onboard markers are present.\n",
+          "byte_length": 69,
+          "sha256": "28fbb5d99d417c3232dfca88de55343e0adae31f21b679ff74592eb6eff349ba"
+        }
+      ]
+    },
+    {
+      "fixture_id": "messy-legacy-repo",
+      "fixture_class": "messy-legacy-repo",
+      "source_kind": "synthetic",
+      "expected_detection": "negative",
+      "tree_digest_sha256": "a411c9130d496b815e2442da812f58a88f117aa731539009953fe911bc55b5ce",
+      "files": [
+        {
+          "path": "README.md",
+          "content_utf8": "# Legacy Fixture\nHistorical notes mention package.json and AGENTS.md, but neither is authoritative at the repository root.\n",
+          "byte_length": 123,
+          "sha256": "242c777433723d617da71bb374a091db2aff94f761d73664a3aa20a780bd9db2"
+        },
+        {
+          "path": "legacy/package.json",
+          "content_utf8": "{\n  \"name\": \"retired-subtree\",\n  \"private\": true\n}\n",
+          "byte_length": 51,
+          "sha256": "5a2145c0fb467e379dcdddc6c3e6514e5f7e4a9a6991b71a28fee579db343135"
+        },
+        {
+          "path": "notes/AGENTS.md.bak",
+          "content_utf8": "Retired instructions; this filename is intentionally non-authoritative.\n",
+          "byte_length": 72,
+          "sha256": "d79b400c885d4a07e253a251be4544c9025af2287d556ca32e42b2f75ad71b2d"
+        }
+      ]
+    },
+    {
+      "fixture_id": "nested-agents-repo",
+      "fixture_class": "nested-agents-repo",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "21e779f8755daebd815ad359aaa96948026922a0da630b0d5e4611b538c18da4",
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "content_utf8": "# Root Instructions\nApply globally unless overridden.\n",
+          "byte_length": 54,
+          "sha256": "a9be6cb64b1ee937d103e24831fa46c1a0e1704d7506ae0e8b0c1b7d185176be"
+        },
+        {
+          "path": "package.json",
+          "content_utf8": "{\n  \"name\": \"fixture-nested-agents\",\n  \"private\": true\n}\n",
+          "byte_length": 57,
+          "sha256": "1e0d1a45684f7d1076dca4cd290d45e43f1b99af5de9b3afbad2443674e2e9d4"
+        },
+        {
+          "path": "packages/child/AGENTS.md",
+          "content_utf8": "# Child Instructions\nApply only under packages/child.\n",
+          "byte_length": 54,
+          "sha256": "b951a45effa4def37a42e8074b15b82e91b1d74f8eff4d62bfdbfbf1fefb07b2"
+        },
+        {
+          "path": "packages/child/package.json",
+          "content_utf8": "{\n  \"name\": \"@fixture/child\",\n  \"private\": true\n}\n",
+          "byte_length": 50,
+          "sha256": "a7b16b6d03b2da0c998a3fff5652e51715410d9e8860816ca90beefc166471fa"
+        }
+      ]
+    },
+    {
+      "fixture_id": "external-work-provider-repo",
+      "fixture_class": "external-work-provider-repo",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "2a9141d8a1ad3e1e84ecd1cc1b6d54469d482c41d6bd988403311d08d5bae89a",
+      "files": [
+        {
+          "path": ".agent-onboard/providers.json",
+          "content_utf8": "{\n  \"schema\": \"fixture-provider-descriptor-001\",\n  \"work\": {\n    \"kind\": \"external\",\n    \"provider\": \"example-work-provider\",\n    \"authority\": \"provider-owned\"\n  }\n}\n",
+          "byte_length": 166,
+          "sha256": "281f4b1687b3a94fc340fb57e5ac9d28ff7c3fa00578dd8afb2146db64e5fcb5"
+        },
+        {
+          "path": "AGENTS.md",
+          "content_utf8": "# Work Provider Fixture\nWork authority is declared through a provider descriptor.\n",
+          "byte_length": 82,
+          "sha256": "093db79f39b2d22d093d0b403c67e9f7e3a88c4e397c63bf74264fd85b42a7bc"
+        },
+        {
+          "path": "package.json",
+          "content_utf8": "{\n  \"name\": \"fixture-external-work-provider\",\n  \"private\": true\n}\n",
+          "byte_length": 66,
+          "sha256": "df9e1131397b30f5b6a3498f157944a0049bd6513b6cea3367de8655078d59c7"
+        }
+      ]
+    },
+    {
+      "fixture_id": "spec-change-provider-repo",
+      "fixture_class": "spec-change-provider-repo",
+      "source_kind": "synthetic",
+      "expected_detection": "positive",
+      "tree_digest_sha256": "6a6a133ba492e51b72adf59bf0d66876638221cb21efdd88c8924780745c8949",
+      "files": [
+        {
+          "path": ".agent-onboard/providers.json",
+          "content_utf8": "{\n  \"schema\": \"fixture-provider-descriptor-001\",\n  \"spec\": {\n    \"kind\": \"external\",\n    \"provider\": \"example-spec-provider\",\n    \"authority\": \"provider-owned\"\n  },\n  \"change\": {\n    \"kind\": \"external\",\n    \"provider\": \"example-change-provider\",\n    \"authority\": \"provider-owned\"\n  }\n}\n",
+          "byte_length": 286,
+          "sha256": "1e9104123d0e281b3b164cd0bf10dc6a61a460706f2bd099c664795ebf7fee48"
+        },
+        {
+          "path": "AGENTS.md",
+          "content_utf8": "# Spec Provider Fixture\nSpecification and change authority use provider descriptors.\n",
+          "byte_length": 85,
+          "sha256": "35a9797ca1f90700e38cc7983cccc5dac94bad016335f1981ed41ef5f2802f7c"
+        },
+        {
+          "path": "pyproject.toml",
+          "content_utf8": "[project]\nname = \"fixture-spec-provider\"\nversion = \"1.0.0\"\n",
+          "byte_length": 59,
+          "sha256": "b193492d04993519b18bb76b38cc0de98d24f02f9699a12e3db777cf37d0dc42"
+        }
+      ]
+    }
+  ],
+  "gate": {
+    "fixture_corpus_captured": true,
+    "measurements_complete": false,
+    "external_fixture_corpus_complete": false,
+    "protocol_deletion_authorized": false,
+    "next_measurement_requires_separate_work_item": true
+  }
+}

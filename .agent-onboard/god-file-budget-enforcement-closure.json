@@ -84,10 +84,10 @@
     {
       "path": ".agent-onboard/work-items.json",
       "category": "authority_registry",
-      "current_lines": 1901,
-      "admitted_reason": "P2S1M2 W1 exact lifecycle growth; source-size ratchet remains exact.",
+      "current_lines": 1913,
+      "admitted_reason": "P2S1M2 W2 exact corpus-capture closure growth; generalized ceilings unchanged.",
       "next_reduction_gate": "P2S1M2",
-      "current_bytes": 54955
+      "current_bytes": 55386
     },
     {
       "path": "README.md",

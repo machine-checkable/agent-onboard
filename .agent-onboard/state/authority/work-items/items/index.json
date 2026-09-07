@@ -9,14 +9,14 @@
   "counts": {
     "open": 0,
     "claimed": 0,
-    "closed": 197,
+    "closed": 198,
     "programs": 2,
     "stages": 4,
     "milestones": 12,
-    "work_items": 197
+    "work_items": 198
   },
-  "latest_work_item_id": "P2S1M2W1",
-  "latest_closed_work_item_id": "P2S1M2W1",
+  "latest_work_item_id": "P2S1M2W2",
+  "latest_closed_work_item_id": "P2S1M2W2",
   "by_status": {
     "open": [],
     "claimed": [],
@@ -217,7 +217,8 @@
       "P2S1M1W1",
       "P2S1M1W2",
       "P2S1M1W3",
-      "P2S1M2W1"
+      "P2S1M2W1",
+      "P2S1M2W2"
     ]
   },
   "by_milestone": {
@@ -440,7 +441,8 @@
       "P2S1M1W3"
     ],
     "P2S1M2": [
-      "P2S1M2W1"
+      "P2S1M2W1",
+      "P2S1M2W2"
     ]
   },
   "item_shards": [
@@ -535,21 +537,14 @@
     {
       "milestone_id": "P2S1M2",
       "path": ".agent-onboard/state/authority/work-items/items/by-milestone/P2S1M2.json",
-      "item_count": 1,
-      "bytes": 540,
-      "sha256": "673c014ba9b26ae01b72391b48049649a0f439ee1494aae5966830df40896ba0",
-      "file_id": "ni:///sha-256;ZzwBS6myauAbcjkbSASWSaD0Oe4UlKrllmgw30CJa6A"
+      "item_count": 2,
+      "bytes": 971,
+      "sha256": "3b6006db2296359a777883235ea91f28b97ff9fa3bb42972517b7fd6dd18e4ab",
+      "file_id": "ni:///sha-256;O2AG2yKWNZp3eIMjXqkfKLl_-fo7tClyUXt_1t0Y5Ks"
     }
   ],
-  "updated_at": "2026-09-02T12:15:46.828Z",
+  "updated_at": "2026-09-02T14:20:37.971Z",
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W22",
-      "title": "Public Target Metadata Service Split Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P2S1M1W1",
       "title": "External cold-start detection hardening",
@@ -574,6 +569,13 @@
     {
       "id": "P2S1M2W1",
       "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W2",
+      "title": "Immutable representative external fixture corpus capture",
       "status": "closed",
       "milestone_id": "P2S1M2",
       "domain": null
