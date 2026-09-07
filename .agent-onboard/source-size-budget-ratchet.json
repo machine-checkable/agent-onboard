@@ -87,13 +87,13 @@
   "tracked_files": {
     ".agent-onboard/state/closures/work-items-closures.jsonl": {
       "category": "authority_state",
-      "max_lines": 195,
-      "max_bytes": 89379,
+      "max_lines": 196,
+      "max_bytes": 89697,
       "baseline_lines": 168,
       "baseline_bytes": 76889,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "P2S1M1W3 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W33",
@@ -327,6 +327,14 @@
           "new_max_lines": 195,
           "previous_max_bytes": 89379,
           "new_max_bytes": 89379
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 closure/authority projection growth; category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 195,
+          "new_max_lines": 196,
+          "previous_max_bytes": 89379,
+          "new_max_bytes": 89697
         }
       ]
     },
@@ -450,13 +458,13 @@
     },
     ".agent-onboard/work-items.json": {
       "category": "authority_registry",
-      "max_lines": 1884,
-      "max_bytes": 54502,
+      "max_lines": 1901,
+      "max_bytes": 54955,
       "baseline_lines": 1573,
       "baseline_bytes": 44798,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "P2S1M1W3 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W33",
@@ -687,6 +695,22 @@
           "new_max_lines": 1884,
           "previous_max_bytes": 54459,
           "new_max_bytes": 54502
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 admission/authority projection growth for one new P2S1M2 milestone and claimed work item; no category or god-file ceiling increase.",
+          "previous_max_lines": 1884,
+          "new_max_lines": 1900,
+          "previous_max_bytes": 54502,
+          "new_max_bytes": 54914
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 closure/authority projection growth; category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 1900,
+          "new_max_lines": 1901,
+          "previous_max_bytes": 54914,
+          "new_max_bytes": 54955
         }
       ]
     },
@@ -1185,13 +1209,13 @@
     },
     ".agent-onboard/state/closures/work-items/manifest.json": {
       "category": "authority_state",
-      "max_lines": 155,
-      "max_bytes": 6266,
+      "max_lines": 164,
+      "max_bytes": 6637,
       "baseline_lines": 126,
       "baseline_bytes": 5085,
       "target_lines": 700,
       "target_bytes": 65536,
-      "reason": "P2S1M1W2 refreshes derived work-item authority/closure projections after admitted P2 lifecycle state.",
+      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M6W34",
@@ -1278,18 +1302,26 @@
           "new_max_bytes": 5895,
           "previous_max_lines": 146,
           "previous_max_bytes": 5895
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 closure/authority projection growth; category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 155,
+          "new_max_lines": 164,
+          "previous_max_bytes": 6266,
+          "new_max_bytes": 6637
         }
       ]
     },
     ".agent-onboard/state/closures/work-items/index.json": {
       "category": "authority_state",
-      "max_lines": 135,
-      "max_bytes": 5440,
+      "max_lines": 144,
+      "max_bytes": 5811,
       "baseline_lines": 110,
       "baseline_bytes": 4384,
       "target_lines": 700,
       "target_bytes": 65536,
-      "reason": "P2S1M1W2 refreshes derived work-item authority/closure projections after admitted P2 lifecycle state.",
+      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W1",
@@ -1369,6 +1401,14 @@
           "new_max_bytes": 5069,
           "previous_max_lines": 126,
           "previous_max_bytes": 5069
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 closure/authority projection growth; category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 135,
+          "new_max_lines": 144,
+          "previous_max_bytes": 5440,
+          "new_max_bytes": 5811
         }
       ]
     },
@@ -1757,13 +1797,13 @@
     },
     ".agent-onboard/source-size-budget-ratchet.json": {
       "category": "authority_registry",
-      "max_lines": 4693,
-      "max_bytes": 203905,
+      "max_lines": 4782,
+      "max_bytes": 207619,
       "baseline_lines": 4602,
       "baseline_bytes": 200572,
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "P2S1M1W2 exact self-ratchet refresh for v0.1.2 foundation.",
+      "reason": "W1 exact ratchet metadata growth only; generalized source-size and god-file ceilings unchanged.",
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W2",
@@ -2520,8 +2560,8 @@
     },
     ".agent-onboard/state/authority/work-items/items/index.json": {
       "category": "authority_state",
-      "max_lines": 571,
-      "max_bytes": 12996,
+      "max_lines": 583,
+      "max_bytes": 13412,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2690,18 +2730,34 @@
           "new_max_lines": 571,
           "previous_max_bytes": 12995,
           "new_max_bytes": 12996
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 admission/authority projection growth for one new P2S1M2 milestone and claimed work item; no category or god-file ceiling increase.",
+          "previous_max_lines": 571,
+          "new_max_lines": 583,
+          "previous_max_bytes": 12996,
+          "new_max_bytes": 13390
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 closure/authority projection growth; category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 583,
+          "new_max_lines": 583,
+          "previous_max_bytes": 13390,
+          "new_max_bytes": 13412
         }
       ],
       "target_lines": 500,
       "target_bytes": 65536,
       "baseline_lines": 484,
       "baseline_bytes": 10953,
-      "reason": "P2S1M1W3 exact lifecycle/authority projection ratchet."
+      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet."
     },
     ".agent-onboard/state/authority/work-items/manifest.json": {
       "category": "authority_state",
-      "max_lines": 130,
-      "max_bytes": 5500,
+      "max_lines": 136,
+      "max_bytes": 5784,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2771,18 +2827,26 @@
           "new_max_lines": 130,
           "previous_max_bytes": 5499,
           "new_max_bytes": 5500
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 admission/authority projection growth for one new P2S1M2 milestone and claimed work item; no category or god-file ceiling increase.",
+          "previous_max_lines": 130,
+          "new_max_lines": 136,
+          "previous_max_bytes": 5500,
+          "new_max_bytes": 5784
         }
       ],
       "target_lines": 500,
       "target_bytes": 65536,
-      "reason": "P2S1M1W3 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
       "baseline_lines": 124,
       "baseline_bytes": 5215
     },
     ".agent-onboard/state/indexes/work-items.index.json": {
       "category": "authority_state",
-      "max_lines": 523,
-      "max_bytes": 10544,
+      "max_lines": 527,
+      "max_bytes": 10646,
       "ratchet_history": [
         {
           "work_item_id": "P1S3M7W5",
@@ -2861,11 +2925,27 @@
           "new_max_lines": 523,
           "previous_max_bytes": 10541,
           "new_max_bytes": 10544
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 admission/authority projection growth for one new P2S1M2 milestone and claimed work item; no category or god-file ceiling increase.",
+          "previous_max_lines": 523,
+          "new_max_lines": 527,
+          "previous_max_bytes": 10544,
+          "new_max_bytes": 10625
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "reason": "Exact W1 closure/authority projection growth; category and god/near-god ceilings unchanged.",
+          "previous_max_lines": 527,
+          "new_max_lines": 527,
+          "previous_max_bytes": 10625,
+          "new_max_bytes": 10646
         }
       ],
       "target_lines": 700,
       "target_bytes": 65536,
-      "reason": "P2S1M1W3 exact lifecycle/authority projection ratchet.",
+      "reason": "P2S1M2W1 exact lifecycle/authority projection ratchet.",
       "baseline_lines": 524,
       "baseline_bytes": 11312
     },
@@ -3035,7 +3115,7 @@
     ".agent-onboard/state/live-authority.json": {
       "category": "authority_state",
       "max_lines": 56,
-      "max_bytes": 1877,
+      "max_bytes": 1902,
       "target_lines": 500,
       "target_bytes": 65536,
       "ratchet_history": [
@@ -3115,9 +3195,18 @@
           "new_max_bytes": 1877,
           "previous_max_lines": 56,
           "previous_max_bytes": 1877
+        },
+        {
+          "work_item_id": "P2S1M2W1",
+          "gate": "External Fixture Corpus Contract and Deterministic Measurement Schema",
+          "reason": "W1 refreshes the derived live authority shard after exact milestone/work-item admission and closure; generalized ceilings unchanged.",
+          "previous_max_lines": 56,
+          "new_max_lines": 56,
+          "previous_max_bytes": 1877,
+          "new_max_bytes": 1902
         }
       ],
-      "reason": "W22 splits target metadata constants and identity helpers out of the target metadata service while preserving JSON/JSONL storage.",
+      "reason": "P2S1M2 W1 exact authority-state refresh after fixture-contract lifecycle closure; generalized ceilings unchanged.",
       "baseline_lines": 56,
       "baseline_bytes": 1871
     },

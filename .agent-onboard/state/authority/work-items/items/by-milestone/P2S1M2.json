@@ -1,0 +1,20 @@
+{
+  "schema": "agent-onboard-work-items-authority-item-shard-001",
+  "package_name": "agent-onboard",
+  "source": ".agent-onboard/work-items.json",
+  "milestone_id": "P2S1M2",
+  "item_count": 1,
+  "items": [
+    {
+      "id": "P2S1M2W1",
+      "milestone_id": "P2S1M2",
+      "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "claim": {
+        "actor": "chatgpt",
+        "claimed_at": "2026-09-02T12:07:23.069Z"
+      },
+      "closure_ref": "closures:P2S1M2W1"
+    }
+  ]
+}

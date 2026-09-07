@@ -68,6 +68,12 @@
       "stage_id": "P2S1",
       "title": "Current Reality Baseline",
       "status": "closed"
+    },
+    {
+      "id": "P2S1M2",
+      "stage_id": "P2S1",
+      "title": "External Fixture Corpus",
+      "status": "open"
     }
   ]
 }

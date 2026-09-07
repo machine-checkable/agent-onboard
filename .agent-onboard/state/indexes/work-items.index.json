@@ -6,22 +6,15 @@
   "legacy_root_projection": ".agent-onboard/work-items.json",
   "live_projection": ".agent-onboard/state/live/work-items.json",
   "closure_payload_authority": ".agent-onboard/state/closures/work-items/manifest.json",
-  "item_count": 196,
+  "item_count": 197,
   "open_count": 0,
   "claimed_count": 0,
-  "closed_count": 196,
+  "closed_count": 197,
   "inline_closure_count": 0,
-  "closure_ref_count": 195,
-  "latest_work_item_id": "P2S1M1W3",
-  "latest_closed_work_item_id": "P2S1M1W3",
+  "closure_ref_count": 196,
+  "latest_work_item_id": "P2S1M2W1",
+  "latest_closed_work_item_id": "P2S1M2W1",
   "latest_work_items": [
-    {
-      "id": "P1S3M7W21",
-      "title": "Public Runtime Composer God-File Exit Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W22",
       "title": "Public Target Metadata Service Split Gate",
@@ -48,18 +41,18 @@
       "title": "Command/schema/state classification and v1 semantic oracle",
       "status": "closed",
       "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W1",
+      "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
       "domain": null
     }
   ],
   "latest_closed_work_items": [
     {
-      "id": "P1S3M7W21",
-      "title": "Public Runtime Composer God-File Exit Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
-    {
       "id": "P1S3M7W22",
       "title": "Public Target Metadata Service Split Gate",
       "status": "closed",
@@ -85,6 +78,13 @@
       "title": "Command/schema/state classification and v1 semantic oracle",
       "status": "closed",
       "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W1",
+      "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
       "domain": null
     }
   ],
@@ -287,7 +287,8 @@
       "P1S3M7W22",
       "P2S1M1W1",
       "P2S1M1W2",
-      "P2S1M1W3"
+      "P2S1M1W3",
+      "P2S1M2W1"
     ]
   },
   "by_milestone": {
@@ -508,6 +509,9 @@
       "P2S1M1W1",
       "P2S1M1W2",
       "P2S1M1W3"
+    ],
+    "P2S1M2": [
+      "P2S1M2W1"
     ]
   },
   "rebuildable_from": [
@@ -516,7 +520,7 @@
     ".agent-onboard/state/closures/work-items-closures.jsonl",
     ".agent-onboard/state/closures/work-items/manifest.json"
   ],
-  "updated_at": "2026-08-31T09:41:26.375Z",
-  "archived_closure_count": 195,
-  "closure_payload_shard_count": 13
+  "updated_at": "2026-09-02T12:15:46.828Z",
+  "archived_closure_count": 196,
+  "closure_payload_shard_count": 14
 }

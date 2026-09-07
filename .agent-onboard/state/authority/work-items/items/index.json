@@ -9,14 +9,14 @@
   "counts": {
     "open": 0,
     "claimed": 0,
-    "closed": 196,
+    "closed": 197,
     "programs": 2,
     "stages": 4,
-    "milestones": 11,
-    "work_items": 196
+    "milestones": 12,
+    "work_items": 197
   },
-  "latest_work_item_id": "P2S1M1W3",
-  "latest_closed_work_item_id": "P2S1M1W3",
+  "latest_work_item_id": "P2S1M2W1",
+  "latest_closed_work_item_id": "P2S1M2W1",
   "by_status": {
     "open": [],
     "claimed": [],
@@ -216,7 +216,8 @@
       "P1S3M7W22",
       "P2S1M1W1",
       "P2S1M1W2",
-      "P2S1M1W3"
+      "P2S1M1W3",
+      "P2S1M2W1"
     ]
   },
   "by_milestone": {
@@ -437,6 +438,9 @@
       "P2S1M1W1",
       "P2S1M1W2",
       "P2S1M1W3"
+    ],
+    "P2S1M2": [
+      "P2S1M2W1"
     ]
   },
   "item_shards": [
@@ -527,17 +531,18 @@
       "bytes": 1239,
       "sha256": "31a45d78e90aa6e992b988811a07ce18786f45681f193325ecbbfb440efb04ca",
       "file_id": "ni:///sha-256;MaRdeOkKpumSuYiBGgfOGHhvRWgfGTMl7Lv7RA77BMo"
+    },
+    {
+      "milestone_id": "P2S1M2",
+      "path": ".agent-onboard/state/authority/work-items/items/by-milestone/P2S1M2.json",
+      "item_count": 1,
+      "bytes": 540,
+      "sha256": "673c014ba9b26ae01b72391b48049649a0f439ee1494aae5966830df40896ba0",
+      "file_id": "ni:///sha-256;ZzwBS6myauAbcjkbSASWSaD0Oe4UlKrllmgw30CJa6A"
     }
   ],
-  "updated_at": "2026-08-31T09:41:26.375Z",
+  "updated_at": "2026-09-02T12:15:46.828Z",
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W21",
-      "title": "Public Runtime Composer God-File Exit Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W22",
       "title": "Public Target Metadata Service Split Gate",
@@ -564,6 +569,13 @@
       "title": "Command/schema/state classification and v1 semantic oracle",
       "status": "closed",
       "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W1",
+      "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
       "domain": null
     }
   ]

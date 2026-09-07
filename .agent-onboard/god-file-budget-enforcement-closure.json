@@ -84,10 +84,10 @@
     {
       "path": ".agent-onboard/work-items.json",
       "category": "authority_registry",
-      "current_lines": 1884,
-      "admitted_reason": "W3 bounded claim/closure growth; source-size ratchet remains exact.",
+      "current_lines": 1901,
+      "admitted_reason": "P2S1M2 W1 exact lifecycle growth; source-size ratchet remains exact.",
       "next_reduction_gate": "P2S1M2",
-      "current_bytes": 54502
+      "current_bytes": 54955
     },
     {
       "path": "README.md",

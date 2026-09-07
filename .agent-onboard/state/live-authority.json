@@ -5,10 +5,10 @@
   "release_line": "public_target_metadata_service_split_gate",
   "authority_state_source_layout": "sharded_seed",
   "state_root": ".agent-onboard/state",
-  "current_work_item": "P2S1M1W2",
-  "current_work_item_title": "Architecture baseline census and P2 decision dossier",
-  "last_closed_work_item": "P2S1M1W2",
-  "last_closed_title": "Architecture baseline census and P2 decision dossier",
+  "current_work_item": "P2S1M2W1",
+  "current_work_item_title": "External fixture corpus contract and deterministic measurement schema",
+  "last_closed_work_item": "P2S1M2W1",
+  "last_closed_title": "External fixture corpus contract and deterministic measurement schema",
   "default_first_read": true,
   "compact_authority_index_file": ".agent-onboard/authority-index.json",
   "state_command": "agent-onboard authority --state",
@@ -17,20 +17,6 @@
   "raw_growth_files_loaded_by_default": false,
   "file_contents_inlined": false,
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W20",
-      "title": "Public Source Domain Runtime Service Near-God Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
-    {
-      "id": "P1S3M7W21",
-      "title": "Public Runtime Composer God-File Exit Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W22",
       "title": "Public Target Metadata Service Split Gate",
@@ -50,6 +36,20 @@
       "title": "Architecture baseline census and P2 decision dossier",
       "status": "closed",
       "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M1W3",
+      "title": "Command/schema/state classification and v1 semantic oracle",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M2W1",
+      "title": "External fixture corpus contract and deterministic measurement schema",
+      "status": "closed",
+      "milestone_id": "P2S1M2",
       "domain": null
     }
   ]
