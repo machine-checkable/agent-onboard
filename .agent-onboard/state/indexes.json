@@ -10,7 +10,7 @@
       "kind": "compact_authority_index",
       "present": true,
       "bytes": 7504,
-      "file_id": "ni:///sha-256;-QpcRrcBz2Cr9d4aQ_eJHsfkCefjjMoMBk8866vpu5o",
+      "file_id": "ni:///sha-256;aLQbDW1ROwpryIbSLqx9WRrG_4CO34gxlBQEk8qyGkw",
       "schema": "agent-onboard-public-authority-compact-index-001",
       "status": null,
       "raw_registry_loaded_by_default": null,
@@ -21,14 +21,14 @@
       "file_path": ".agent-onboard/work-items.index.json",
       "kind": "work_items_compact_index",
       "present": true,
-      "bytes": 1607,
-      "file_id": "ni:///sha-256;S8jo45PjeWQMsQ_n9HD6mCsXaCWBKKLUQQMRk4snBEs",
+      "bytes": 1420,
+      "file_id": "ni:///sha-256;Y7cEROQ6GuR-XsCuFaLajcBXoN_k1VSYl-WOcr1mAdo",
       "schema": "agent-onboard-target-work-items-index-001",
       "status": "active",
       "raw_registry_loaded_by_default": false,
       "content_inlined": false,
       "item_count": 196,
-      "open_count": 1,
+      "open_count": 0,
       "closed_count": 195
     },
     {
@@ -50,8 +50,8 @@
       "file_path": ".agent-onboard/work-items.json",
       "present": true,
       "kind": "work_items_raw_ledger",
-      "bytes": 54254,
-      "file_id": "ni:///sha-256;Vx6qujwtnEsYkrC3IohtMirac3BG83SqL3C1xNz4zyk",
+      "bytes": 54502,
+      "file_id": "ni:///sha-256;GgLjpGeuYS8wHBlG8g7m95Rjzbnax8wNwtfGZXe0xEw",
       "content_inlined": false,
       "loaded_by_default": false
     },
@@ -65,7 +65,7 @@
       "loaded_by_default": false
     }
   ],
-  "authority_index_digest": "ni:///sha-256;-QpcRrcBz2Cr9d4aQ_eJHsfkCefjjMoMBk8866vpu5o",
-  "work_items_index_digest": "ni:///sha-256;S8jo45PjeWQMsQ_n9HD6mCsXaCWBKKLUQQMRk4snBEs",
+  "authority_index_digest": "ni:///sha-256;aLQbDW1ROwpryIbSLqx9WRrG_4CO34gxlBQEk8qyGkw",
+  "work_items_index_digest": "ni:///sha-256;Y7cEROQ6GuR-XsCuFaLajcBXoN_k1VSYl-WOcr1mAdo",
   "claims_index_digest": "ni:///sha-256;otIDDGJGcys456Ufaq9WPeWXVrjiCX9kkTWzXjQyHGo"
 }

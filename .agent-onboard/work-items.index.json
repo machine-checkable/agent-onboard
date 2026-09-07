@@ -4,19 +4,11 @@
   "registry_path": ".agent-onboard/work-items.json",
   "raw_registry_loaded_by_default": false,
   "item_count": 196,
-  "open_count": 1,
+  "open_count": 0,
   "closed_count": 195,
   "admission_queue_count": 0,
-  "active_work_item_ids": [
-    "P2S1M1W3"
-  ],
-  "next_open_work_item": {
-    "id": "P2S1M1W3",
-    "title": "Command/schema/state classification and v1 semantic oracle",
-    "status": "open",
-    "milestone_id": "P2S1M1",
-    "domain": null
-  },
+  "active_work_item_ids": [],
+  "next_open_work_item": null,
   "next_admission_candidate": null,
   "active_admission_queue": [],
   "latest_closed_limit": 5,
@@ -57,5 +49,5 @@
       "domain": null
     }
   ],
-  "updated_at": "2026-08-31T04:18:21.917Z"
+  "updated_at": "2026-08-31T09:37:50.611Z"
 }

@@ -72,3 +72,5 @@ The current source storage remains text-first: compact JSON snapshots plus JavaS
 
 `P1S3M6W24` adds `.agent-onboard/source-size-budget-ratchet.json` and `scripts/check-source-size-budget-ratchet.js` as the clean-and-compaction size gate. The gate is read-only: it counts text source/state/document files, reports remaining god files, fails when tracked oversized files grow beyond their ratchet maximum, and fails when new untracked files exceed their category budget.
 
+
+- The P2 v1 semantic oracle and G1 classification evidence are frozen in `docs/p2-architecture-overhaul.md`.

@@ -40,7 +40,7 @@
       "id": "P1S1",
       "program_id": "P1",
       "title": "Public source participation stage",
-      "status": "open"
+      "status": "closed"
     },
     {
       "id": "P1S2",
@@ -120,13 +120,13 @@
       "id": "P1S3M7",
       "stage_id": "P1S3",
       "title": "Public runtime composer debt reduction milestone",
-      "status": "open"
+      "status": "closed"
     },
     {
       "id": "P2S1M1",
       "stage_id": "P2S1",
       "title": "Current Reality Baseline",
-      "status": "open"
+      "status": "closed"
     }
   ],
   "work_items": [
@@ -1872,7 +1872,13 @@
       "id": "P2S1M1W3",
       "milestone_id": "P2S1M1",
       "title": "Command/schema/state classification and v1 semantic oracle",
-      "status": "open"
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-08-31T09:37:50.609Z",
+        "note": "Freeze P2 v1 command/schema/state classification oracle and G1 evidence"
+      },
+      "closure_ref": "closures:P2S1M1W3"
     }
   ]
 }

@@ -6,11 +6,11 @@
   "projection_of": "canonical_sharded_work_items_authority",
   "legacy_full_projection": false,
   "item_count": 196,
-  "open_count": 1,
+  "open_count": 0,
   "claimed_count": 0,
-  "closed_count": 195,
+  "closed_count": 196,
   "latest_work_item_id": "P2S1M1W3",
-  "latest_closed_work_item_id": "P2S1M1W2",
+  "latest_closed_work_item_id": "P2S1M1W3",
   "rebuildable_from": [
     ".agent-onboard/state/authority/work-items/manifest.json",
     ".agent-onboard/state/authority/work-items/items/index.json",
@@ -22,25 +22,18 @@
     "storage_backend_changed": false
   },
   "counts": {
-    "open": 1,
+    "open": 0,
     "claimed": 0,
-    "closed": 195,
+    "closed": 196,
     "programs": 2,
     "stages": 4,
     "milestones": 11,
     "work_items": 196
   },
   "current_work_item": "P2S1M1W3",
-  "next_open_work_item": "P2S1M1W3",
-  "updated_at": "2026-08-31T04:25:00.000Z",
+  "next_open_work_item": null,
+  "updated_at": "2026-08-31T09:41:26.375Z",
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W20",
-      "title": "Public Source Domain Runtime Service Near-God Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W21",
       "title": "Public Runtime Composer God-File Exit Gate",
@@ -65,6 +58,13 @@
     {
       "id": "P2S1M1W2",
       "title": "Architecture baseline census and P2 decision dossier",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M1W3",
+      "title": "Command/schema/state classification and v1 semantic oracle",
       "status": "closed",
       "milestone_id": "P2S1M1",
       "domain": null

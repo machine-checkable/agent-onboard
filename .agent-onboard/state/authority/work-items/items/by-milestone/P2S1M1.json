@@ -31,7 +31,13 @@
       "id": "P2S1M1W3",
       "milestone_id": "P2S1M1",
       "title": "Command/schema/state classification and v1 semantic oracle",
-      "status": "open"
+      "status": "closed",
+      "claim": {
+        "actor": "gpt-5.6-sol",
+        "claimed_at": "2026-08-31T09:37:50.609Z",
+        "note": "Freeze P2 v1 command/schema/state classification oracle and G1 evidence"
+      },
+      "closure_ref": "closures:P2S1M1W3"
     }
   ]
 }

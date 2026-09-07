@@ -61,13 +61,13 @@
       "id": "P1S3M7",
       "stage_id": "P1S3",
       "title": "Public runtime composer debt reduction milestone",
-      "status": "open"
+      "status": "closed"
     },
     {
       "id": "P2S1M1",
       "stage_id": "P2S1",
       "title": "Current Reality Baseline",
-      "status": "open"
+      "status": "closed"
     }
   ]
 }

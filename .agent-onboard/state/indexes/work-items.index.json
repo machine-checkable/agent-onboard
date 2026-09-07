@@ -7,13 +7,13 @@
   "live_projection": ".agent-onboard/state/live/work-items.json",
   "closure_payload_authority": ".agent-onboard/state/closures/work-items/manifest.json",
   "item_count": 196,
-  "open_count": 1,
+  "open_count": 0,
   "claimed_count": 0,
-  "closed_count": 195,
+  "closed_count": 196,
   "inline_closure_count": 0,
-  "closure_ref_count": 194,
+  "closure_ref_count": 195,
   "latest_work_item_id": "P2S1M1W3",
-  "latest_closed_work_item_id": "P2S1M1W2",
+  "latest_closed_work_item_id": "P2S1M1W3",
   "latest_work_items": [
     {
       "id": "P1S3M7W21",
@@ -46,19 +46,12 @@
     {
       "id": "P2S1M1W3",
       "title": "Command/schema/state classification and v1 semantic oracle",
-      "status": "open",
+      "status": "closed",
       "milestone_id": "P2S1M1",
       "domain": null
     }
   ],
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W20",
-      "title": "Public Source Domain Runtime Service Near-God Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W21",
       "title": "Public Runtime Composer God-File Exit Gate",
@@ -86,12 +79,17 @@
       "status": "closed",
       "milestone_id": "P2S1M1",
       "domain": null
+    },
+    {
+      "id": "P2S1M1W3",
+      "title": "Command/schema/state classification and v1 semantic oracle",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
+      "domain": null
     }
   ],
   "by_status": {
-    "open": [
-      "P2S1M1W3"
-    ],
+    "open": [],
     "claimed": [],
     "closed": [
       "P1S1M1W1",
@@ -288,7 +286,8 @@
       "P1S3M7W21",
       "P1S3M7W22",
       "P2S1M1W1",
-      "P2S1M1W2"
+      "P2S1M1W2",
+      "P2S1M1W3"
     ]
   },
   "by_milestone": {
@@ -517,7 +516,7 @@
     ".agent-onboard/state/closures/work-items-closures.jsonl",
     ".agent-onboard/state/closures/work-items/manifest.json"
   ],
-  "updated_at": "2026-08-31T04:25:00.000Z",
-  "archived_closure_count": 194,
+  "updated_at": "2026-08-31T09:41:26.375Z",
+  "archived_closure_count": 195,
   "closure_payload_shard_count": 13
 }

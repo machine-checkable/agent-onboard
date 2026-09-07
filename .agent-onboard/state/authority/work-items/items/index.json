@@ -7,20 +7,18 @@
   "root_compatibility_projection": ".agent-onboard/work-items.json",
   "live_compatibility_projection": ".agent-onboard/state/live/work-items.json",
   "counts": {
-    "open": 1,
+    "open": 0,
     "claimed": 0,
-    "closed": 195,
+    "closed": 196,
     "programs": 2,
     "stages": 4,
     "milestones": 11,
     "work_items": 196
   },
   "latest_work_item_id": "P2S1M1W3",
-  "latest_closed_work_item_id": "P2S1M1W2",
+  "latest_closed_work_item_id": "P2S1M1W3",
   "by_status": {
-    "open": [
-      "P2S1M1W3"
-    ],
+    "open": [],
     "claimed": [],
     "closed": [
       "P1S1M1W1",
@@ -217,7 +215,8 @@
       "P1S3M7W21",
       "P1S3M7W22",
       "P2S1M1W1",
-      "P2S1M1W2"
+      "P2S1M1W2",
+      "P2S1M1W3"
     ]
   },
   "by_milestone": {
@@ -525,20 +524,13 @@
       "milestone_id": "P2S1M1",
       "path": ".agent-onboard/state/authority/work-items/items/by-milestone/P2S1M1.json",
       "item_count": 3,
-      "bytes": 997,
-      "sha256": "b0fe5289e54da4098ae61126b2ebf4c212a21ea3cef8bed78a61ba6cece0ab2d",
-      "file_id": "ni:///sha-256;sP5SieVNpAmK5hEmsuv0whKiHqPO-L7XimG6bOzgqy0"
+      "bytes": 1239,
+      "sha256": "31a45d78e90aa6e992b988811a07ce18786f45681f193325ecbbfb440efb04ca",
+      "file_id": "ni:///sha-256;MaRdeOkKpumSuYiBGgfOGHhvRWgfGTMl7Lv7RA77BMo"
     }
   ],
-  "updated_at": "2026-08-31T04:25:00.000Z",
+  "updated_at": "2026-08-31T09:41:26.375Z",
   "latest_closed_work_items": [
-    {
-      "id": "P1S3M7W20",
-      "title": "Public Source Domain Runtime Service Near-God Reduction Gate",
-      "status": "closed",
-      "milestone_id": "P1S3M7",
-      "domain": null
-    },
     {
       "id": "P1S3M7W21",
       "title": "Public Runtime Composer God-File Exit Gate",
@@ -563,6 +555,13 @@
     {
       "id": "P2S1M1W2",
       "title": "Architecture baseline census and P2 decision dossier",
+      "status": "closed",
+      "milestone_id": "P2S1M1",
+      "domain": null
+    },
+    {
+      "id": "P2S1M1W3",
+      "title": "Command/schema/state classification and v1 semantic oracle",
       "status": "closed",
       "milestone_id": "P2S1M1",
       "domain": null
